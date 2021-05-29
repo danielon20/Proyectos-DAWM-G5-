@@ -3,5 +3,5 @@ Aqui se daran los avances del proyecto del grupo 5 (El invencible Git Team)
 Integrantes:
 Daniel Viscarra
 Darinka Townsend
-Tommy Villao
+Tommy Beltrán
 Josue Villao
