@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>disenoWeb-contactanos</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <header>
+      <h1>Sitio de diseño web</h1>
+      <h2>Contactanos</h2>
+      <hr>
+    </header>
+
+    <!---
+    <nav id="regreso">
+      <ul>
+        <li><a href="index.html">Principal</a></li>
+      </ul>
+    </nav>
+    --->
+
+    <section id="contenido">
+      <form>
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombre" required="required">
+        <br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required="required">
+        <br>
+        <!--- Revisar --->
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" required="required">
+        <br>
+        <!--- cambiar por si acaso
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" required="required">
+        <br>
+        --->
+        <label for="genero">Género:</label>
+        <br>
+        <input type="radio" id="masculino" name="gender" value="masculino">
+        <label for="femenino">Masculino</label><br>
+        <input type="radio" id="femenino" name="gender" value="femenino">
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="otro" name="gender" value="otro">
+        <label for="otro">Otro</label>
+        <br>
+        
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" required="required">
+        <br>
+
+        <label for="lo">Lugar de origen:</label>
+        <select name="lo" id="lo">
+          
+          <option value="mexico">México</option>
+          <option value="colombia">Colombia</option>
+          <option value="españa">España</option>
+
+          <option value="argentina">Argentina</option>
+          <option value="peru">Perú</option>
+          <option value="venezuela">Venezuela</option>
+
+          <option value="chile">Chile</option>
+          <option value="guatemala">Guatemala</option>
+          <option value="ecuador">Ecuador</option>
+
+          <option value="bolivia">Bolivia</option>
+          <option value="republica dominicana">República Dominicana</option>
+          <option value="honduras">Honduras</option>
+
+          <option value="el salvador">El Salvador</option>
+          <option value="paraguay">Paraguay</option>
+          <option value="nicaragua">Nicaragua</option>
+
+          <option value="costa rica">Costa Rica</option>
+          <option value="panama">Panamá</option>
+          <option value="uruguay">Uruguay</option>
+
+          <option value="puerto rico">Puerto Rico</option>
+        
+        </select>
+        <br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" required="required">
+        <br>
+
+        <label for="detalles">Detalles:</label>
+        <textarea cols="40" rows="20"></textarea>
+        <br>
+        
+        <!--- Tenerlo en caso de que sea necesario para mas adelante
+        <label for="puntuacion">Puntuación:</label>
+        <input type="number" min="1" max="10" step="1" id="puntuacion">
+        <br>
+
+        <input type="checkbox" id="notrobot" name="notrobot" value="notrobot" required="required">
+        <label for="notrobot"> No soy un robot</label>
+        <br>
+        --->
+        <button>Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+         Copyright © 2021 - Sitio de diseño web
+      </p>
+
+      <!--- Tener para mas adelante
+      <p>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a></p>  --->
+
+
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
