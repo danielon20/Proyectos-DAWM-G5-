@@ -29,6 +29,14 @@
      box-sizing: border-box !important;
 }
 
+#imagenP{
+     opacity: 0.5;
+}
+
+#imgRad{
+     border-radius:150px;
+}
+
 html {
      scroll-behavior: smooth;
 }
@@ -69,7 +77,9 @@ h6 {
 }
 
 h1 {
-     font-size: 24px
+     font-size: xx-large;
+     color: white;
+     font-weight: 900;
 }
 
 h2 {
