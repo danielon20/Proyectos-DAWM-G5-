@@ -726,3 +726,15 @@ button {
 
 /** end footer **/
 
+/** seccion noticias **/
+
+div[id^="ntc"] {
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     padding: 1rem 0 1rem 0.6rem;
+
+}
+
+img#img-ntc {
+     max-height: 350px;
+}
