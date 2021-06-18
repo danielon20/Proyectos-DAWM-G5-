@@ -59,8 +59,9 @@
     .cont {
         margin-top: 47%;
     }
+    /*Aqui se define el margen de abajo */
     .main_form {
-        margin-bottom: -92%;
+        margin-bottom: 2%;
     }
 }
 
@@ -88,8 +89,9 @@
     .cont {
         margin-top: 50%;
     }
+    /*Aqui se define el margen de abajo */
     .main_form {
-        margin-bottom: -58%;
+        margin-bottom: 2%;
     }
     .cont span {
         font-size: 20px;
@@ -166,8 +168,9 @@
     .cont {
         margin-top: 89%;
     }
+    /*Aqui se define el margen de abajo */
     .main_form {
-        margin-bottom: -102%;
+        margin-bottom: 2%;
         padding: 55px 15px;
     }
     .navigation.navbar {
