@@ -674,7 +674,11 @@ button {
      margin-top: 31%;
 }
 
-.cont h3 {
+.w-cont {
+     text-align: center;
+}
+
+.cont h3, .w-cont h3 {
      color: #fff;
      font-size: 45px;
      line-height: 30px;
@@ -682,7 +686,7 @@ button {
      padding: 30px 0px 0px 0px;
 }
 
-.cont span {
+.cont span, .w-cont span {
      color: #fff;
      font-size: 30px;
      line-height: 30px;
@@ -691,7 +695,7 @@ button {
      font-weight: bold;
 }
 
-.cont p {
+.cont p, .w-cont p {
      color: #fff;
      font-size: 17px;
      line-height: 30px;
