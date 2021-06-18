@@ -604,7 +604,8 @@ button {
      background: #0c0f38;
      padding: 55px 55px;
      border-radius: 30px;
-     margin-bottom: -58%;
+     /*Aqui se define el margen de abajo */
+     margin-bottom: 2%;
 }
 
 .contact .main_form .contactus {

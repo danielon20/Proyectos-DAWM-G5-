@@ -93,57 +93,57 @@
                   <form class="main_form">
                      <div class="row">
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Nombre y Apellidos" type="text" name="Name">
+                           <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required" name="Name">
                         </div>
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Email" type="text" name=" Email">
+                           <input class="contactus" placeholder="Celular" type="text" required="required" name="Phone">
+                        </div>                  
+                        <div class="col-sm-12">
+			  <label style="color:white" for="genero"><FONT SIZE=4><u>Género:</u></font></label>
+                          <br>
+                          <input type="radio" id="masculino" name="gender" value="masculino">
+                          <label for="masculino"><FONT SIZE=3>Masculino</font></label><br>
+                          <input type="radio" id="femenino" name="gender" value="femenino">
+                          <label for="femenino"><FONT SIZE=3>Femenino</font></label><br>
+                          <input type="radio" id="otro" name="gender" value="otro">
+                          <label for="otro"><FONT SIZE=3>Otro</font></label>
                         </div>
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Celular" type="text" name="Phone">
+			  <label style="color:white" for="fecha"><FONT SIZE=4><u>Fecha de nacimiento:</u></font></label>
+                          <input class="contactus" placeholder="Fecha" type="date" required="required" name="Date">
                         </div>
 			<div class="col-sm-12">
-			   <label style="color:white" for="fecha">Fecha de nacimiento:</label>
-                           <input class="contactus" placeholder="Fecha" type="date" name="Date">
-                        </div>
-			<!-- opciones 
-			<div class="col-sm-12">
-                           
-                              <select name="lo" id="lo">
-          
-          			<option value="mexico">México</option>
-          			<option value="colombia">Colombia</option>
-          			<option value="españa">España</option>
-
-          			<option value="argentina">Argentina</option>
-          			<option value="peru">Perú</option>
-          			<option value="venezuela">Venezuela</option>
-
-          			<option value="chile">Chile</option>
-          			<option value="guatemala">Guatemala</option>
-          			<option value="ecuador">Ecuador</option>
-
-          			<option value="bolivia">Bolivia</option>
-          			<option value="republica dominicana">República Dominicana</option>
-          			<option value="honduras">Honduras</option>
-
-          			<option value="el salvador">El Salvador</option>
-          			<option value="paraguay">Paraguay</option>
-          			<option value="nicaragua">Nicaragua</option>
-
-          			<option value="costa rica">Costa Rica</option>
-          			<option value="panama">Panamá</option>
-          			<option value="uruguay">Uruguay</option>
-
-          			<option value="puerto rico">Puerto Rico</option>
-        
-        		      </select>	   
-                        </div>
-			-->		
-                        <div class="col-sm-12">
-                           <textarea class="textarea" placeholder="Detalles" type="text" name="Message"></textarea>
+                          <label style="color:white" for="lugarO"><FONT SIZE=4><u>Lugar de origen:</u></font>:</label>
+                          <select name="paises" class="contactus">
+          	            <option value="mexico">México</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="españa">España</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="peru">Perú</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="chile">Chile</option>
+                            <option value="guatemala">Guatemala</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="republica dominicana">República Dominicana</option>
+                            <option value="honduras">Honduras</option>
+                            <option value="el salvador">El Salvador</option>
+                            <option value="paraguay">Paraguay</option>
+                            <option value="nicaragua">Nicaragua</option>
+                            <option value="costa rica">Costa Rica</option>
+                            <option value="panama">Panamá</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="puerto rico">Puerto Rico</option>
+        		  </select>
                         </div>
                         <div class="col-sm-12">
-                           <button class="send">Send</button>
+                          <input class="contactus" placeholder="Email" type="text" required="required" name=" Email">
+                        </div>
+                        <div class="col-sm-12">
+                          <textarea class="textarea" placeholder="Detalles" type="text" name="Message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                           <button class="send">Enviar</button>
                         </div>
                      </div>
                   </form>
@@ -158,7 +158,8 @@
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <!-- Hay que saber porque se produce un error con esta linea (El error es que me duplica una lista de seleccion....tipo select) 
+      <script src="js/plugin.js"></script>-->
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
