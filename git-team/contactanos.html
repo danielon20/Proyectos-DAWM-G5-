@@ -30,6 +30,10 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
+      <!--TUROTIAL-->
+      <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet"> 
+      
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -96,13 +100,13 @@
                   <form class="main_form">
                      <div class="row">
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required" name="Name">
+                           <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required" name="Name" data-title="Nombres" data-intro="Aqui ingresa los nombres con los que estás registrado en el correo.">
                         </div>
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Celular" type="text" required="required" name="Phone">
+                           <input class="contactus" placeholder="Celular" type="text" required="required" name="Phone"data-title="Celular" data-intro="Ingresa aquí tu número celular donde te gustaría recibir información de nuestros cursos en oferta.">
                         </div>                  
-                        <div class="col-sm-12">
-			  <label style="color:white" for="genero"><FONT SIZE=4><u>Género:</u></font></label>
+                        <div class="col-sm-12" data-title="Genero" data-intro="Selecciona tu género.">
+			                 <label style="color:white" for="genero"><FONT SIZE=4><u>Género:</u></font></label>
                           <br>
                           <input type="radio" id="masculino" name="gender" value="masculino">
                           <label for="masculino"><FONT SIZE=3>Masculino</font></label><br>
@@ -111,13 +115,13 @@
                           <input type="radio" id="otro" name="gender" value="otro">
                           <label for="otro"><FONT SIZE=3>Otro</font></label>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12" data-title="Fehca de nacimiento" data-intro="Registra la fecha en la que naciste. Recuerda que para recibir nuestra información de ofertas y nuevos cursos debes ser mayor de edad.">
 			  <label style="color:white" for="fecha"><FONT SIZE=4><u>Fecha de nacimiento:</u></font></label>
                           <input class="contactus" placeholder="Fecha" type="date" required="required" name="Date">
                         </div>
 			<div class="col-sm-12">
                           <label style="color:white" for="lugarO"><FONT SIZE=4><u>Lugar de origen:</u></font>:</label>
-                          <select name="paises" class="contactus">
+                          <select name="paises" class="contactus" data-title="País" data-intro="¿Cuál es tu país de origen o dónde recides actualmente?">
           	            <option value="mexico">México</option>
                             <option value="colombia">Colombia</option>
                             <option value="españa">España</option>
@@ -139,10 +143,10 @@
                             <option value="puerto rico">Puerto Rico</option>
         		  </select>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12" data-title="Correo" data-intro="Ingresa tu correo donde podamos contactarte.">
                           <input class="contactus" placeholder="Email" type="text" required="required" name=" Email">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12" data-title="Detalles" data-intro="¿Por qué motivos nos escribes?, deseas recibir información de un curso, ¿cuál? \n ¿Quieres formar parte de nuestro equipo? Cuéntanos, dobre ti.">
                           <textarea class="textarea" placeholder="Detalles" type="text" name="Message"></textarea>
                         </div>
                         <div class="col-sm-12">
@@ -180,5 +184,12 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+      <!-- TUTORIAL INICIO -->
+      <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+      <script>
+         introJs().setOptions({ 'skipLabel': 'Saltar', 'nextLabel': 'Siguiente', 'prevLabel': 'Anterior', 'doneLabel': 'Finalizar'}).start()
+         introJs().start()
+      </script>
    </body>
 </html>
