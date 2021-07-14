@@ -252,11 +252,15 @@ button {
   float: right;
 }
 
+.logo{
+  padding: 0 0 0 0;
+}
 .navigation.navbar-dark .navbar-nav .nav-link {
   padding: 0 25px;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
+  text-justify: center;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
