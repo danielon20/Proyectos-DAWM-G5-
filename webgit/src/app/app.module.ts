@@ -7,12 +7,14 @@ import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { ContactosComponent } from './pages/contactos/contactos.component';
+import { EquipoDesarrolloComponent } from './pages/equipo-desarrollo/equipo-desarrollo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NoticiasComponent,
-    ContactosComponent
+    ContactosComponent,
+    EquipoDesarrolloComponent
   ],
   imports: [
     BrowserModule,
