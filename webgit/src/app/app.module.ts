@@ -11,6 +11,7 @@ import { EquipoDesarrolloComponent } from './pages/equipo-desarrollo/equipo-desa
 import { CursosComponent } from './pages/cursos/cursos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { PreciosComponent } from './pages/precios/precios.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
     EquipoDesarrolloComponent,
     CursosComponent,
     InicioComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    PreciosComponent
   ],
   imports: [
     BrowserModule,
