@@ -17,6 +17,7 @@ import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { AdministradorComponent } from './pages/administrador/administrador.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ProcesoComponent } from './pages/proceso/proceso.component';
+import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProcesoComponent } from './pages/proceso/proceso.component';
     IngresoComponent,
     AdministradorComponent,
     FilterPipe,
-    ProcesoComponent
+    ProcesoComponent,
+    MisCursosComponent
   ],
   imports: [
     BrowserModule,
