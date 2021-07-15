@@ -15,6 +15,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PreciosComponent } from './pages/precios/precios.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ProcesoComponent } from './pages/proceso/proceso.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     ServiciosComponent,
     PreciosComponent,
     IngresoComponent,
-    FilterPipe
+    FilterPipe,
+    ProcesoComponent
   ],
   imports: [
     BrowserModule,
