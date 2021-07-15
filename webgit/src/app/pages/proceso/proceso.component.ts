@@ -7,9 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProcesoComponent implements OnInit {
 
+  mostrarDatos:Boolean =true;
+  mostrarPago:Boolean =false;
+  mostrarFin:Boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+  showPagos():void{
+    this.mostrarDatos=false;
+    this.mostrarPago=true;
+    this.mostrarFin=false;
+  }
+
+  showDatos():void{
+    this.mostrarDatos=true;
+    this.mostrarPago=false;
+    this.mostrarFin=false;
+  }
+
+  showFin():void{
+    this.mostrarFin=true;
+    this.mostrarPago=false;
+    this.mostrarDatos=false;
+  }
+
+
 
 }

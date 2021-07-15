@@ -45,6 +45,9 @@ export class AdministradorComponent implements OnInit {
                             <li class="nav-item">
                               <a class="nav-link" href="#">Estudiantes</a>
                             </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Cerrar sesión</a>
+                            </li>
                         </ul>
                       </div>
                   </nav>
