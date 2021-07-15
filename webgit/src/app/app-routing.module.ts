@@ -9,6 +9,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PreciosComponent } from './pages/precios/precios.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { AdministradorComponent } from './pages/administrador/administrador.component';
+import { ProcesoComponent } from './pages/proceso/proceso.component';
 
 const routes: Routes = [
   {path:"noticias", component:NoticiasComponent},
@@ -19,11 +20,18 @@ const routes: Routes = [
   {path:"inicio", component:InicioComponent},
   {path:"precios", component:PreciosComponent},
   {path:"ingreso", component:IngresoComponent},
-  {path:"admin", component:AdministradorComponent}
+  {path:"admin", component:AdministradorComponent},
+  {path:"proceso", component:ProcesoComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
+
+
+
 export class AppRoutingModule { }
+
+

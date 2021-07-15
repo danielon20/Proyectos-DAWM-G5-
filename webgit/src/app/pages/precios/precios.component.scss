@@ -13,7 +13,9 @@
   text-align: justify;
   margin: 0 auto;
   margin-top: 20px;
-}
+  margin-bottom: 20px;
+
+  }
 h2 {
   padding-top: 5%;
   padding-bottom: 3%;
@@ -34,10 +36,14 @@ h5{
 .table_price {
   float: left;
   width: 100%;
-  background: #fff;
   padding: 0 0 40px 0;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
-  border: solid #fff 15px;
+  box-shadow: 0 0 1px 0 rgb(7, 0, 43);
+  border: solid #fff 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: ease-in all 0.5s;
+  margin-bottom: 30px;
+
 }
 
 .table_price_head {
@@ -96,6 +102,17 @@ h5{
   width: 100%;
   justify-content: center;
   display: flex;
+}
+
+.table_price:hover{
+  transition: ease-in all 0.1s;
+  transform: scale(1.1);
+
+}
+
+.bg:hover{
+  background: #8308eb;
+  color: #fff;
 }
 
 
