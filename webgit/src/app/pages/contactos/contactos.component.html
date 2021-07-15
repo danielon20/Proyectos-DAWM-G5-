@@ -1,3 +1,5 @@
+<!--TUROTIAL-->
+<link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet">
 <!-- contact -->
 <div id="contact" class="contact">
   <div class="container">
@@ -6,10 +8,10 @@
            <form class="main_form">
               <div class="row">
                  <div class="col-sm-12">
-                    <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required" name="Name" data-title="Nombres" data-intro="Aqui ingresa los nombres con los que estás registrado en el correo.">
+                  <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required" name="Name" data-title="Nombres" data-intro="Aqui ingresa los nombres con los que estás registrado en el correo.">
                  </div>
                  <div class="col-sm-12">
-                    <input class="contactus" placeholder="Celular" type="text" required="required" name="Phone"data-title="Celular" data-intro="Ingresa aquí tu número celular donde te gustaría recibir información de nuestros cursos en oferta.">
+                  <input class="contactus" placeholder="Celular" type="text" required="required" name="Phone"data-title="Celular" data-intro="Ingresa aquí tu número celular donde te gustaría recibir información de nuestros cursos en oferta.">
                  </div>
                  <div class="col-sm-12" data-title="Genero" data-intro="Selecciona tu género.">
                 <label style="color:white" for="genero"><FONT SIZE=4><u>Género:</u></FONT></label>
@@ -80,3 +82,9 @@
 
 </footer>
 
+<!-- TUTORIAL INICIO -->
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+<script>
+   introJs().setOptions({ 'skipLabel': 'Saltar', 'nextLabel': 'Siguiente', 'prevLabel': 'Anterior', 'doneLabel': 'Finalizar'}).start()
+   introJs().start()
+</script>
