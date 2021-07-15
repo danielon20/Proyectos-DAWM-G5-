@@ -2,23 +2,23 @@
   <div id="why" class="why">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-12">
           <div class="titlepage">
             <h2>Noticias destacadas</h2>
-            <p>Entérate de las últimas novedades en el mundo de la programación y mejora tus habilidades accediendo a los siguientes enlaces</p>
+            <h3>Entérate de las últimas novedades en el mundo de la programación y mejora tus habilidades accediendo a los siguientes enlaces</h3>
           </div>
         </div>
       </div>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4 mx-2 my-2">
-        <div class="input-group">
-          <input type="search" class="form-control rounded" placeholder="Texto ..." aria-label="Search"
+      <div class="row g-4 mx-2 my-2">
+        <div class="input-group col-12 col-md-12 ">
+          <input type="search" class="form-control rounded" placeholder="Buscar ..." aria-label="Search"
             aria-describedby="search-addon" />
-          <button type="button" class="btn btn-outline-primary">Buscar</button>
+          <!-- <button type="button" class="btn btn-outline-primary">Buscar</button> -->
         </div>
       </div>
 
-        <!--
+      <!--
         <div id="ntc1">
           <div class="cabecera">
             <h2 id="tipo-noticia">Actualidad</h2>
@@ -46,7 +46,10 @@
           </div>
           <img id="img-ntc" src="https://blogthinkbig.com/wp-content/uploads/sites/4/2019/03/Python-Example-Logo.jpg?resize=610%2C407" alt="img3" />
         </div>  
-        -->
+      -->
+        
+      
+        
       
       <!-- 
       <h2>
@@ -63,7 +66,24 @@
         prueba2
       </h1>
     -->
- 
+      <div id="rss-container" class="row row-cols-1 row-cols-md-3 g-4 mx-2 my-2">
+        <!-- Agregar el *ngFor -->
+        <div class="col" *ngFor="let new of news">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">{{new.title}}</h5>
+              <p class="card-text">{{new.description}}</p>
+              <p class="card-text">
+                <a href={{new.link}} target="_blank">Link</a>
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <small class="text-muted">{{new.pubDate}}</small>
+              <small class="text-muted">{{new.creator}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
       
     
     </div>
