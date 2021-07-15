@@ -14,6 +14,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PreciosComponent } from './pages/precios/precios.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
+import { AdministradorComponent } from './pages/administrador/administrador.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +26,15 @@ import { IngresoComponent } from './pages/ingreso/ingreso.component';
     InicioComponent,
     ServiciosComponent,
     PreciosComponent,
-    IngresoComponent
+    IngresoComponent,
+    AdministradorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     NgbModule,
-    HttpClientModule, 
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
