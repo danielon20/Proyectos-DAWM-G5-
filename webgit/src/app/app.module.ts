@@ -13,6 +13,7 @@ import { CursosComponent } from './pages/cursos/cursos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PreciosComponent } from './pages/precios/precios.component';
+import { IngresoComponent } from './pages/ingreso/ingreso.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PreciosComponent } from './pages/precios/precios.component';
     CursosComponent,
     InicioComponent,
     ServiciosComponent,
-    PreciosComponent
+    PreciosComponent,
+    IngresoComponent
   ],
   imports: [
     BrowserModule,

@@ -377,9 +377,15 @@ button {
   color: #090808;
 }
 
-.why .why-box:hover {
+.why .why-box:hover{
   transition: ease-in all 0.1s;
   transform: scale(1.1);
+  background-color: #fdf39b;
+
+}
+
+h3:hover{
+  color: #ddd;
 }
 
 .bg {
