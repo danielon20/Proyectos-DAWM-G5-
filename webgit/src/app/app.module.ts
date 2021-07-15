@@ -14,6 +14,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { PreciosComponent } from './pages/precios/precios.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { IngresoComponent } from './pages/ingreso/ingreso.component';
     InicioComponent,
     ServiciosComponent,
     PreciosComponent,
-    IngresoComponent
+    IngresoComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

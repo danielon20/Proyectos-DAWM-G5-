@@ -12,8 +12,7 @@
 
       <div class="row g-4 mx-2 my-2">
         <div class="input-group col-12 col-md-12 ">
-          <input type="search" class="form-control rounded" placeholder="Buscar ..." aria-label="Search"
-            aria-describedby="search-addon" />
+          <input type="search" class="form-control rounded" name="filterNews" placeholder="Buscar ..." aria-label="Search"aria-describedby="search-addon" [(ngModel)]="filterNews" >
           <!-- <button type="button" class="btn btn-outline-primary">Buscar</button> -->
         </div>
       </div>
@@ -68,18 +67,18 @@
     -->
       <div id="rss-container" class="row row-cols-1 row-cols-md-3 g-4 mx-2 my-2">
         <!-- Agregar el *ngFor -->
-        <div class="col" *ngFor="let new of news">
+        <div class="col" *ngFor="let _new of news | filter:filterNews">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">{{new.title}}</h5>
-              <p class="card-text">{{new.description}}</p>
+              <h5 class="card-title">{{_new.title}}</h5>
+              <p class="card-text">{{_new.description}}</p>
               <p class="card-text">
-                <a href={{new.link}} target="_blank">Link</a>
+                <a href={{_new.link}} target="_blank">Link</a>
               </p>
             </div>
             <div class="card-footer d-flex justify-content-between">
-              <small class="text-muted">{{new.pubDate}}</small>
-              <small class="text-muted">{{new.creator}}</small>
+              <small class="text-muted">{{_new.pubDate}}</small>
+              <small class="text-muted">{{_new.creator}}</small>
             </div>
           </div>
         </div>

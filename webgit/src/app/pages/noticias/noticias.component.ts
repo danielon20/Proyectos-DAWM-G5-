@@ -41,7 +41,10 @@ export class NoticiasComponent implements OnInit {
   }
   */
   constructor() { }
-  news:any[] = [
+
+  filterNews = '';
+
+  news = [
     {
       "title":"Cómo eliminar automáticamente un pantallazo de WhatsApp después de haberlo enviado",
       "link":"https://eluniverso.com/larevista/tecnologia/como-eliminar-automaticamente-un-screenshot-de-whatsapp-despues-de-haberlo-enviado-nota/",
