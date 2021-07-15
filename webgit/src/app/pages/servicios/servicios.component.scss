@@ -43,8 +43,8 @@
   font-weight: 500;
   transition: ease all 0.5s;
   top: 0;
-  border: solid #0aceb1 2px;
-  color: #0aceb1;
+  border: solid #fff 2px;
+  color: #fff;
 }
 
 .app-features ul li:last-child {
@@ -53,8 +53,8 @@
 
 .app-features li:hover > i,
 .app-features li:focus > i {
-  background: #1e72bc;
-  border-color: #1e72bc;
+  background: #0d0f38;
+  border-color: #0d0f38;
   color: #fff;
 }
 
@@ -88,21 +88,6 @@ section.cross_layout {
   background-size: 100% 100%;
 }
 
-.cont_theme_blog h3 {
-  text-transform: uppercase;
-  background: linear-gradient(to right, #1e72bc 0%, #30CFD0 100%);
-  background: -webkit-linear-gradient(to right, #1e72bc 0%, #30CFD0 100%);
-  background: -moz-linear-gradient(to right, #1e72bc 0%, #30CFD0 100%);
-  background: -ms-linear-gradient(to right, #1e72bc 0%, #30CFD0 100%);
-  background: -o-linear-gradient(to right, #1e72bc 0%, #30CFD0 100%);
-  -webkit-text-fill-color: transparent;
-  text-transform: none;
-  font-size: 55px;
-  line-height: 60px;
-  font-weight: 400;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
 
 .cont_theme_blog p {
   font-size: 17px;
@@ -166,7 +151,7 @@ h6 {
   padding: 0 0 10px 0;
   font-weight: normal;
   line-height: normal;
-  color: #111111;
+
   margin: 0
 }
 
@@ -177,7 +162,10 @@ h1 {
 }
 
 h2 {
-  font-size: 22px
+  padding-top: 5%;
+  font-size: 40px;
+  color: #0d0f38;
+  text-align: center;
 }
 
 h3 {
@@ -185,7 +173,9 @@ h3 {
 }
 
 h4 {
-  font-size: 16px
+  font-size: 25px;
+  color: #111111;
+  font-weight:20%;
 }
 
 h5 {
@@ -194,6 +184,11 @@ h5 {
 
 h6 {
   font-size: 13px
+}
+
+
+#precio{
+  margin-bottom: 5% ;
 }
 
 *,
