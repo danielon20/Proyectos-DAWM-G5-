@@ -11,6 +11,8 @@ import { ContactosComponent } from './pages/contactos/contactos.component';
 import { EquipoDesarrolloComponent } from './pages/equipo-desarrollo/equipo-desarrollo.component';
 import { CursosComponent } from './pages/cursos/cursos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { PreciosComponent } from './pages/precios/precios.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     ContactosComponent,
     EquipoDesarrolloComponent,
     CursosComponent,
-    InicioComponent
+    InicioComponent,
+    ServiciosComponent,
+    PreciosComponent
   ],
   imports: [
     BrowserModule,
