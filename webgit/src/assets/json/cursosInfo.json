@@ -1,0 +1,29 @@
+[
+   {
+      "id":"1",
+      "nombre":"Diseño Web HTML ",
+      "alumnos":"35",
+      "ganancia":"65.00",
+      "costo":"10.00",     
+      "img":"tc.jpg",
+      "inicio":"2019-06-17 15:56:23"
+   },
+   {
+      "id":"2",
+      "nombre":"Android Studio",
+      "alumnos":"85",
+      "ganancia":"104.50",
+      "costo":"10.00",
+      "img":"pm.jpg",
+      "fecha":"2018-08-11 16:25:33"
+   },
+   {
+      "id":"3",
+      "nombre":"Base de Datos SQL",
+      "alumnos":"86",
+      "ganancia":"72.50",
+      "costo":"10.00",
+      "img":"al.jpg",
+      "fecha":"2018-08-11 16:25:36"
+   }
+]
