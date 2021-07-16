@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import*as listaCursos from '../../../assets/json/cursosInfo.json';
 
 @Component({
   selector: 'app-mis-cursos',
   templateUrl: './mis-cursos.component.html',
-  styleUrls: ['./mis-cursos.component.scss']
+  styleUrls: ['./mis-cursos.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class MisCursosComponent implements OnInit {
   cursos =listaCursos;

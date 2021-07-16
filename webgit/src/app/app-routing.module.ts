@@ -11,6 +11,7 @@ import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { AdministradorComponent } from './pages/administrador/administrador.component';
 import { ProcesoComponent } from './pages/proceso/proceso.component';
 import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
+import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
 
 const routes: Routes = [
   {path:"noticias", component:NoticiasComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:"ingreso", component:IngresoComponent},
   {path:"admin", component:AdministradorComponent},
   {path:"proceso", component:ProcesoComponent},
-  {path:"mis-cursos", component:MisCursosComponent}
+  {path:"mis-cursos", component:MisCursosComponent},
+  {path:"estadistica", component:EstadisticasComponent}
 ];
 
 @NgModule({

@@ -18,6 +18,9 @@ import { AdministradorComponent } from './pages/administrador/administrador.comp
 import { FilterPipe } from './pipes/filter.pipe';
 import { ProcesoComponent } from './pages/proceso/proceso.component';
 import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
+import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
+//GRAFICOS
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
     AdministradorComponent,
     FilterPipe,
     ProcesoComponent,
-    MisCursosComponent
+    MisCursosComponent,
+    EstadisticasComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
     SharedModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
