@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import*as listaCursos from 'src/assets/json/cursosInfo.json';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,6 @@ import*as listaCursos from 'src/assets/json/cursosInfo.json';
 })
 export class AppComponent {
   title = 'webgit';
-  cursosInfo = listaCursos;
 }
 
 

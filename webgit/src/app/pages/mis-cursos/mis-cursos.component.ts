@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import*as listaCursos from '../../../assets/json/cursosInfo.json';
+import* as listaCursos from '../../../assets/json/cursosInfo.json';
 
 @Component({
   selector: 'app-mis-cursos',
@@ -8,7 +8,7 @@ import*as listaCursos from '../../../assets/json/cursosInfo.json';
   encapsulation: ViewEncapsulation.None,
 })
 export class MisCursosComponent implements OnInit {
-  cursos =listaCursos;
+  cursos:any =listaCursos;
   constructor() { }
 
   ngOnInit(): void {
