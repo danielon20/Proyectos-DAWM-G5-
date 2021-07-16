@@ -60,40 +60,40 @@
 
 <div id= "pago" *ngIf="mostrarPago">
   <div class="wrapper">
-      <div class="container">
           <article class="part card-details">
               <h1>
                   Credit Card Details
               </h1>
               <form action=""  autocomplete="off" id="formularioPago">
                   <div class="group card-number">
-                      <label for="first">Card Number</label>
+                      <label for="first">Tarjeta </label>
                       <input type="text" id="first" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
                       <input type="text" id="second" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
-                      <input type="text" id="third" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
-                      <input type="text" id="fourth" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+
                   </div>
                   <div class="group card-name">
-                      <label for="name">Name On Card</label>
+                      <label for="name">Nombre</label>
                       <input type="text" id="name" class="" type="text" maxlength="20" placeholder="Name Surname">
                   </div>
                   <div class="group card-expiry">
                       <div class="input-item expiry">
-                          <label for="expiry">Expiry Date</label>
+                          <label for="expiry">Expira </label>
                           <input type="text" class="month" id="expiry" placeholder="02">
                           <input type="text" class="year" id="" placeholder="2017">
                       </div>
                       <div class="input-item csv">
-                          <label for="csv">CSV No.</label><a href="#what">?</a>
+                          <label for="csv">CSV No.</label>
                           <input type="text" class="csv">
                       </div>
                   </div>
               </form>
           </article>
-          <div class="part bg"></div>
+
       </div>
+
+
   </div>
-</div>
+
 
 
 
@@ -107,15 +107,15 @@
 
   <div class="container" style="width: 100%;">
     <input type="radio" class="radio" name="progress" value="five" id="five">
-    <label for="five" class="label" (click)="showDatos()">Datos Personales</label>
+    <label for="five" class="label" (click)="showDatos()">Limpiar</label>
 
 
 
     <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
-    <label for="fifty" class="label" (click)="showPagos()">Pago</label>
+    <label for="fifty" class="label" (click)="showPagos()">Ir al Pago</label>
 
     <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
-    <label for="onehundred" class="label" (click)="showFin()">Listo</label>
+    <label for="onehundred" class="label" (click)="showFin()">Finalizar</label>
 
 
     <div class="progress" style="width:70%;">
