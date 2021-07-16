@@ -8,7 +8,7 @@ import*as listaCursos from 'src/assets/json/cursosInfo.json';
 })
 export class AppComponent {
   title = 'webgit';
-  cursosInfo: any = listaCursos;
+  cursosInfo = listaCursos;
 }
 
 

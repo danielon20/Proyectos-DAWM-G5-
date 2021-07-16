@@ -37,7 +37,7 @@ export class AdministradorComponent implements OnInit {
                               <a class="nav-link" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#"> Mis cursos</a>
+                              <a class="nav-link" href="/mis-cursos"> Mis cursos</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Archivos</a>

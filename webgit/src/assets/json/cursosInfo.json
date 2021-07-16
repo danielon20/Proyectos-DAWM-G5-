@@ -4,8 +4,8 @@
       "nombre":"Diseño Web HTML ",
       "alumnos":"35",
       "ganancia":"65.00",
-      "costo":"10.00",     
-      "img":"tc.jpg",
+      "costo":"10.00",
+      "img":"cursoHTML.jpg",
       "inicio":"2019-06-17 15:56:23"
    },
    {
@@ -14,7 +14,7 @@
       "alumnos":"85",
       "ganancia":"104.50",
       "costo":"10.00",
-      "img":"pm.jpg",
+      "img":"AndroidStudio.png",
       "fecha":"2018-08-11 16:25:33"
    },
    {
@@ -23,7 +23,7 @@
       "alumnos":"86",
       "ganancia":"72.50",
       "costo":"10.00",
-      "img":"al.jpg",
+      "img":"sql.png",
       "fecha":"2018-08-11 16:25:36"
    }
 ]

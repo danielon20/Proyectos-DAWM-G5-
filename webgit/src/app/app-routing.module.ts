@@ -10,6 +10,7 @@ import { PreciosComponent } from './pages/precios/precios.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { AdministradorComponent } from './pages/administrador/administrador.component';
 import { ProcesoComponent } from './pages/proceso/proceso.component';
+import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
 
 const routes: Routes = [
   {path:"noticias", component:NoticiasComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:"precios", component:PreciosComponent},
   {path:"ingreso", component:IngresoComponent},
   {path:"admin", component:AdministradorComponent},
-  {path:"proceso", component:ProcesoComponent}
+  {path:"proceso", component:ProcesoComponent},
+  {path:"mis-cursos", component:MisCursosComponent}
 ];
 
 @NgModule({
