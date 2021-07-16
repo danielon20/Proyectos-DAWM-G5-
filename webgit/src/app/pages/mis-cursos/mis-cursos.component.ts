@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import* as listaCursos from '../../../assets/json/cursosInfo.json';
+// @ts-ignore
+import listaCursos from '../../../assets/json/cursosInfo.json';
 
 @Component({
   selector: 'app-mis-cursos',

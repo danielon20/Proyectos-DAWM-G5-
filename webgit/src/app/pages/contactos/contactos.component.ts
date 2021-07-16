@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// @ts-ignore
+import * as introJs from 'intro.js/intro.js';
 
 @Component({
   selector: 'app-contactos',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactos.component.scss']
 })
 export class ContactosComponent implements OnInit {
-
+  introJS = introJs();
   constructor() { }
 
   ngOnInit(): void {
+    this.introJS.start();
   }
 
 }
