@@ -89,7 +89,7 @@ export class EstadisticasComponent implements OnInit {
                       <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Inicio</a>
+                              <a class="nav-link" href="/admin">Panel de Control</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="/mis-cursos"> Mis cursos</a>
