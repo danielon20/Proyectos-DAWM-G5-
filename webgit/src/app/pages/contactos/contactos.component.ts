@@ -6,6 +6,7 @@ import * as introJs from 'intro.js/intro.js';
   selector: 'app-contactos',
   templateUrl: './contactos.component.html',
   styleUrls: ['./contactos.component.scss']
+  //encapsulation: ViewEncapsulation.None
 })
 export class ContactosComponent implements OnInit {
   introJS = introJs();

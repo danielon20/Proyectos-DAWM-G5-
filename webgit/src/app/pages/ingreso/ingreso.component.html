@@ -1,4 +1,4 @@
-
+  <app-header></app-header>
   <div class="login-wrap">
     <div class="login-html">
       <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -22,7 +22,7 @@
             <form action="/admin" method="POST">
               <input type="submit" class="button" value="Sign In">
             </form>-->
-            <a style="text-align: center;" class="button" href="/admin">Sig In</a>
+            <a style="text-align: center;" class="button" [routerLink]="['/admin']" routerLinkActive="router-link-active">Sig In</a>
           </div>
           <div class="hr"></div>
           <div class="foot-lnk">

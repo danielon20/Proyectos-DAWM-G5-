@@ -28,13 +28,43 @@
   color: #fdd430;
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .navigation.navbar {
-    float: right;
-    display: inherit !important;
-    padding: 0;
-    width: 100%;
-  }
-  .navigation .navbar-collapse {
+    /*.navigation .navbar-collapse {
+        background: #fff;
+        padding: 20px;
+        margin-top: 56px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }*/
+    .navigation.navbar {
+      float: right;
+      display: inherit !important;
+      padding: 0;
+      width: 100%;
+    }
+    .navigation .navbar-collapse {
+      background: #fff;
+      padding: 20px;
+      margin-top: 56px;
+      position: absolute;
+      width: 100%;
+      margin-right: 20px;
+      z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+      padding: 10px 0;
+      color: #000;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+      border-color: #fff;
+      float: right;
+    }
+
+}
+
+@media (max-width: 575px) {
+/*.navigation .navbar-collapse {
     background: #fff;
     padding: 20px;
     margin-top: 56px;
@@ -42,18 +72,7 @@
     width: 100%;
     margin-right: 20px;
     z-index: 999;
-  }
-  .navigation.navbar-dark .navbar-nav .nav-link {
-    padding: 10px 0;
-    color: #000;
-  }
-  .navigation.navbar-dark .navbar-toggler {
-    border-color: #fff;
-    float: right;
-  }
-}
-
-@media (max-width: 575px) {
+}*/
   .navigation.navbar {
     float: right;
     display: inherit !important;

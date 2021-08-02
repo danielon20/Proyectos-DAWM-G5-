@@ -1,3 +1,4 @@
+<app-headerdos></app-headerdos>
 <body>
 <div id="serviceI" class="Services">
   <div class="container">
@@ -11,7 +12,7 @@
      </div>
      <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <a href="/mis-cursos">
+          <a [routerLink]="['/mis-cursos']" routerLinkActive="router-link-active">
            <div class="Services-box">
               <i><img src="../../../assets/panel-de-control.png" alt="#" /></i>
               <h3>Tabla de Cursos</h3>
@@ -20,7 +21,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <a href="/estadistica">
+          <a [routerLink]="['/estadistica']" routerLinkActive="router-link-active">
            <div class="Services-box">
               <i><img src="../../../assets/grafico-de-barras.png" alt="#" /></i>
               <h3>Estadísticas</h3>

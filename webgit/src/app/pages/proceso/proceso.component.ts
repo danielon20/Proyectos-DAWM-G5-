@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-proceso',
   templateUrl: './proceso.component.html',
   styleUrls: ['./proceso.component.scss']
+  //encapsulation: ViewEncapsulation.None
 })
 export class ProcesoComponent implements OnInit {
 

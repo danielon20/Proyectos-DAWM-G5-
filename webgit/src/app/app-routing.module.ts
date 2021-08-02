@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ContactosComponent } from './pages/contactos/contactos.component';
@@ -14,10 +14,10 @@ import { MisCursosComponent } from './pages/mis-cursos/mis-cursos.component';
 import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
 
 const routes: Routes = [
+  {path:"", component:InicioComponent},
   {path:"noticias", component:NoticiasComponent},
   {path:"contactos", component:ContactosComponent},
   {path:"equipo", component:EquipoDesarrolloComponent},
-  {path:"", component:InicioComponent},
   {path:"servicios", component:ServiciosComponent},
   {path:"inicio", component:InicioComponent},
   {path:"precios", component:PreciosComponent},
@@ -29,7 +29,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 

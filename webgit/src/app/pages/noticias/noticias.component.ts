@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient,HttpHeaders } from "@angular/common/http";
+
 //import { NewsRss } from "../../news-rss";
-//import * as xml2js from "xml2js";
+import * as xml2js from "xml2js";
+//import xml2js from 'xml2js';
 
 //declare const require;
 //const xml2js = require("xml2js");
@@ -10,6 +12,7 @@ import { HttpClient } from "@angular/common/http";
   selector: 'app-noticias',
   templateUrl: './noticias.component.html',
   styleUrls: ['./noticias.component.scss']
+  //encapsulation: ViewEncapsulation.None
 })
 export class NoticiasComponent implements OnInit {
   /*
@@ -19,11 +22,11 @@ export class NoticiasComponent implements OnInit {
     this.GetRssFeedData();
   }
 
-  
+
   ngOnInit() {
     this.aversh = this.GetRssFeedData();
   }
-  
+
 
   GetRssFeedData() {
     const requestOptions: Object = {
@@ -40,11 +43,84 @@ export class NoticiasComponent implements OnInit {
       });
   }
   */
-  constructor() { }
+  //constructor() { }
+
+  proxy = 'https://damp-beach-17296.herokuapp.com/'
+  url = this.proxy +"https://api.eluniverso.arcpublishing.com/feeds/rss/?website=el-universo&query=taxonomy.sections._id:%22/noticias/economia%22&sort=first_publish_date:desc"
+
+  public xmlItems: any;
+  constructor(private http:HttpClient) {
+    //console.log("prueba de XML1");
+      this.loadXML();
+      //console.log("prueba de XML2");
+  }
+
+  //getting data function
+ loadXML()
+ {
+   /*Read Data*/
+   //console.log("prueba de XML3");
+   this.http.get(this.url,
+   {
+     headers: new HttpHeaders()
+       .set('Content-Type', 'text/xml')
+       .append('Access-Control-Allow-Methods', 'GET')
+       .append('Access-Control-Allow-Origin', '*')
+       .append('Access-Control-Allow-Headers', "Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Request-Method"),
+     responseType: 'text'
+   })
+   .subscribe((data) => {
+     this.parseXML(data)
+       .then((data) => {
+        //console.log("prueba de XML1");
+         this.xmlItems = data;
+         //console.log("prueba de XML2");
+       });
+   });
+   /*Read Data*/
+ }
+ //store xml data into array variable
+ parseXML(data: string ) {
+     return new Promise(resolve => {
+       var k: string | number,
+         arr : any = [],
+         parser = new xml2js.Parser(
+           {
+             trim: true,
+             explicitArray: true
+           });
+       parser.parseString(data, function (err: any, result: any) {
+        //console.log("prueba de XML3");
+        //console.log(result.rss.channel[0].item);
+         var obj = result.rss.channel[0].item;
+         //console.log("prueba de XML4");
+         //console.log(obj);
+         for (k in obj) {
+           //console.log(k);
+           var item = obj[k];
+           //console.log(item);
+           //console.log();
+           arr.push({
+             title: item.title[0],
+             description: item.description[0],
+             link: item.link[0],
+             pubDate: item.pubDate[0],
+             creator: item['dc:creator'][0]
+
+           });
+         }
+         resolve(arr);
+       });
+     });
+   }
+
+
+
+
 
   filterNews = '';
 
-  news = [
+  /*news = [
     {
       "title":"Cómo eliminar automáticamente un pantallazo de WhatsApp después de haberlo enviado",
       "link":"https://eluniverso.com/larevista/tecnologia/como-eliminar-automaticamente-un-screenshot-de-whatsapp-despues-de-haberlo-enviado-nota/",
@@ -150,8 +226,8 @@ export class NoticiasComponent implements OnInit {
       "pubDate":"Wed, 07 Jul 2021 13:51:00 +0000",
       "description":"Soledad Antelada Toledano se comporta como un hacker, pero de los “buenos”."
     }
-     
-  ]
+
+  ]*/
 
 
 

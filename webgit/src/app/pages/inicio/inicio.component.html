@@ -1,3 +1,4 @@
+<app-header></app-header>
 <!DOCTYPE html>
 <html lang="es">
 <body>
@@ -9,7 +10,7 @@
                      <h1>¡Da el salto <br> al desarrollo web!</h1>
                      <span>¡No pierdas mas dinero!</span>
                      <p>Contrata tu propio sitio web o aprende a desarrollar con nosotros en nuestros cursos online </p>
-                     <a href="#serviceI">Conocer más</a>
+                     <a [routerLink]="['/servicios']" routerLinkActive="router-link-active" >Conocer más</a>
                   </div>
                </div>
                <div class="col-md-7">
@@ -36,7 +37,7 @@
                   <div class="web_hosting">
                      <figure><img  src="../../../assets/equi.jpg" width="300" height="200" alt="#"/></figure>
                      <p>Somos un grupo de Ingenieros que brinda el servicio de creación de páginas web con mantenimiento anual y diseños originales. Además ofrecemos cursos donde podrás aprender a desarrollar</p>
-                     <a href="/equipo">Read more</a>
+                     <a [routerLink]="['/equipo']" routerLinkActive="router-link-active" >Read more</a>
                   </div>
                </div>
             </div>
@@ -79,7 +80,7 @@
                      <p>Paquete completo para desarrollar tu idea en una aplicación móvil</p>
                   </div>
                </div>
-               <a class="read_more" href="/servicios">Saber más</a>
+               <a class="read_more" [routerLink]="['/servicios']" routerLinkActive="router-link-active">Saber más</a>
             </div>
          </div>
       </div>
