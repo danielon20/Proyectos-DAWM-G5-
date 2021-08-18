@@ -1,0 +1,274 @@
+
+
+.app-features li {
+
+  padding-left: 100px;
+  position: relative;
+  margin: 25px 0 0;
+  float: left;
+  border-bottom: dotted 1px #ddd;
+  padding-bottom: 25px;
+
+}
+
+.app-features li > i {
+  position: absolute;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #fff;
+  font-size: 35px;
+  font-weight: 500;
+  transition: ease all 0.5s;
+  top: 0;
+  border: solid #fff 2px;
+  color: #fff;
+}
+
+.app-features ul li:last-child {
+  border-bottom: none;
+}
+
+.app-features li:hover > i,
+.app-features li:focus > i {
+  background: #0d0f38;
+  border-color: #0d0f38;
+  color: #fff;
+}
+
+.app-features h4 {
+  text-transform: none;
+  font-weight: 500;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #666666;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.80857;
+  font-weight: normal;
+}
+
+a {
+  color: #1f1f1f;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4{
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: normal;
+
+  margin: 0
+}
+
+h1 {
+  font-size: xx-large;
+  color: white;
+  font-weight: 900;
+}
+
+h2 {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  font-size: 40px;
+  color: #0d0f38;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-size: 18px
+}
+
+h4 {
+  font-size: 25px;
+  color: #111111;
+  font-weight:20%;
+}
+
+#precio{
+  margin-bottom: 5% ;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  color: #212121;
+  text-decoration: none!important;
+  opacity: 1
+}
+
+
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+p {
+  margin: 0px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+  outline: none !important;
+}
+
+a,
+.btn {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus {
+  outline: 0;
+}
+
+
+.full {
+  float: left;
+  width: 100%;
+}
+
+.layout_padding {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.full {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/** why section **/
+
+.why {
+  margin-top: 90px;
+  background: #ffff;
+  font-family: Poppins;
+}
+
+.why .titlepage {
+  text-align: center;
+}
+
+.why .titlepage h2 {
+  padding-bottom: 20px;
+}
+
+.why .titlepage p {
+  color: #090808;
+}
+
+.why .why-box h3 {
+  padding: 20px 0px 20px 0px;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0d0f38;
+  display: block;
+  font-weight: 500;
+}
+
+.why .why-box {
+  text-align: center;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 40px 20px 20px 20px;
+  transition: ease-in all 0.5s;
+  margin-bottom: 30px;
+  box-shadow: #ddd 0px 0px 10px
+}
+
+.why .why-box p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #090808;
+}
+
+.why .why-box:hover{
+  transition: ease-in all 0.1s;
+  transform: scale(1.1);
+  background-color: #fdf39b;
+
+}
+
+h3:hover{
+  color: #ddd;
+}
+
+.bg {
+  font-size: 16px;
+  background-color: #090808;
+  color: #fff;
+  padding: 10px 0px;
+  width: 100%;
+  max-width: 190px;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.bg:hover {
+  background: #8308eb;
+  color: #fff;
+}
+
+
+/** end why section **/

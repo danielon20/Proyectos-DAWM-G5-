@@ -1,0 +1,129 @@
+<!--<app-header></app-header>-->
+<div *ngIf="mostrarDatos">
+  <form id="datos">
+    <h2>Datos Personales</h2>
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form6Example1" class="form-control" />
+            <label class="form-label" for="form6Example1">First name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form6Example2" class="form-control" />
+            <label class="form-label" for="form6Example2">Last name</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="form6Example3" class="form-control" />
+        <label class="form-label" for="form6Example3">Company name</label>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="form6Example4" class="form-control" />
+        <label class="form-label" for="form6Example4">Address</label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="form6Example5" class="form-control" />
+        <label class="form-label" for="form6Example5">Email</label>
+      </div>
+
+      <!-- Number input -->
+      <div class="form-outline mb-4">
+        <input type="number" id="form6Example6" class="form-control" />
+        <label class="form-label" for="form6Example6">Phone</label>
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+        <label class="form-label" for="form6Example7">Additional information</label>
+      </div>
+
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+<div id= "pago" *ngIf="mostrarPago">
+  <div class="wrapper">
+          <article class="part card-details">
+              <h1>
+                  Credit Card Details
+              </h1>
+              <form action=""  autocomplete="off" id="formularioPago">
+                  <div class="group card-number">
+                      <label for="first">Tarjeta </label>
+                      <input type="text" id="first" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+                      <input type="text" id="second" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;">
+
+                  </div>
+                  <div class="group card-name">
+                      <label for="name">Nombre</label>
+                      <input type="text" id="name" class="" type="text" maxlength="20" placeholder="Name Surname">
+                  </div>
+                  <div class="group card-expiry">
+                      <div class="input-item expiry">
+                          <label for="expiry">Expira </label>
+                          <input type="text" class="month" id="expiry" placeholder="02">
+                          <input type="text" class="year" id="" placeholder="2017">
+                      </div>
+                      <div class="input-item csv">
+                          <label for="csv">CSV No.</label>
+                          <input type="text" class="csv">
+                      </div>
+                  </div>
+              </form>
+          </article>
+
+      </div>
+
+
+  </div>
+
+
+
+
+<div id= "pago" *ngIf="mostrarFin">
+  <div id="foto" style="text-align: center;">
+  <i><img src="../../../assets/visto.jpg" alt="#" width="360" height="360" /></i>
+</div>
+<h2 style="text-align: center;">FINALIZASTE TU COMPRA CON ÉXITO
+</h2>
+</div>
+
+
+
+
+  <div class="container" style="width: 100%;">
+    <input type="radio" class="radio" name="progress" value="five" id="five">
+    <label for="five" class="label" (click)="showDatos()">Limpiar</label>
+
+
+
+    <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
+    <label for="fifty" class="label" (click)="showPagos()">Ir al Pago</label>
+
+    <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
+    <label for="onehundred" class="label" (click)="showFin()">Finalizar</label>
+
+
+    <div class="progress" style="width:70%;">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+

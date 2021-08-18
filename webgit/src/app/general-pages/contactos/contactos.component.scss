@@ -1,0 +1,143 @@
+/**-- map --**/
+
+#map {
+  height: 100%;
+  min-height: 790px;
+}
+
+
+
+h2 {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  font-size: 50px;
+  color: #5a078b;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box !important;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #666666;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.80857;
+  font-weight: normal;
+}
+//Podria quizas ir h2
+h1 {
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: normal;
+  color: #111111;
+  margin: 0
+}
+
+h1 {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  font-size: 20px;
+  color: #0d0f38;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  line-height: 24px;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button:focus {
+  outline: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/** contact section **/
+
+.contact {
+  padding-top: 90px;
+  font-family: Poppins;
+}
+
+.main_form {
+  background: #0c0f38;
+  padding: 55px 55px;
+  border-radius: 30px;
+  /*Aqui se define el margen de abajo */
+  margin-bottom: 2%;
+}
+
+.contact .main_form .contactus {
+  border: #fff solid 1px;
+  padding: 0px 19px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  width: 100%;
+  height: 52px;
+  background: #fff;
+  color: #999999;
+  font-size: 16px;
+}
+
+.contact .main_form .textarea {
+  margin-bottom: 25px;
+  padding: 0px 19px;
+  color: #999999 !important;
+  width: 100%;
+  border: #fff solid 1px;
+  border-radius: 15px;
+  padding-top: 38px;
+  background: #fff;
+}
+
+.contact .main_form .send {
+  font-size: 16px;
+  transition: ease-in all 0.5s;
+  background-color: #fff;
+  color: #ef4259;
+  padding: 12px 70px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 30px;
+}
+
+.contact .main_form .send:hover {
+  background-color: #8308eb;
+  transition: ease-in all 0.5s;
+  color: #fff;
+}
+
+#contact *::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+
+

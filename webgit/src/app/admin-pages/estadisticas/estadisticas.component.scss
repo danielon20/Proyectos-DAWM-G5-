@@ -1,0 +1,114 @@
+.card-header{
+  background-color:#68045f ;
+  color: #fff;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box !important;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #666666;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.80857;
+  font-weight: normal;
+}
+
+h1,
+h2 {
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: normal;
+  color: #111111;
+  margin: 0
+}
+
+h1 {
+  font-size: xx-large;
+  color: white;
+  font-weight: 900;
+}
+
+h2 {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  font-size: 27px;
+  color: #0d0f38;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+}
+
+#agregar{
+  background-color: #0d0f38;
+  border-color: #fff;
+}
+
+#agregar:hover{
+  background-color: #08a4c0;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus {
+  outline: 0;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

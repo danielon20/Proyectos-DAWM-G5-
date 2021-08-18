@@ -7,6 +7,25 @@
 .menu {
   -webkit-filter: url("#shadowed-goo");
           filter: url("#shadowed-goo");
+
+    /*
+  position: absolute;
+  left: 50%;
+  margin-left: 0%;
+  padding-top: 20px;
+
+
+  width: 650px;
+  height: 150px;
+    */
+  position: fixed;
+  bottom: 2%;
+  left: 1%;
+  box-sizing: border-box;
+  font-size: 40px;
+  text-align: left;
+  padding-left: 80px;
+  padding-bottom: 150px;
 }
 
 .menu-item, .menu-open-button {
@@ -74,29 +93,6 @@
 .menu-open:checked + .menu-open-button .hamburger-3 {
   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
           transform: translate3d(0, 0, 0) rotate(-45deg);
-}
-
-.menu {
-
-
-  /*
-  position: absolute;
-  left: 50%;
-  margin-left: 0%;
-  padding-top: 20px;
-
-
-width: 650px;
-  height: 150px;
-  */
-  position: fixed;
-  bottom: 2%;
-  left: 1%;
-  box-sizing: border-box;
-  font-size: 40px;
-  text-align: left;
-  padding-left: 80px;
-  padding-bottom: 150px;
 }
 
 .menu-item:hover {
