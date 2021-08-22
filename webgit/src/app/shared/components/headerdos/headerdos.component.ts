@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from '../../../services/usuarios.service'
 
 @Component({
   selector: 'app-headerdos',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderdosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usuariosService : UsuariosService) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +24,10 @@ export class HeaderdosComponent implements OnInit {
       y.setAttribute('aria-expanded', 'false');
     }
 
+
+  }
+  outSesion(){
+    this.usuariosService.logout();
   }
 
 

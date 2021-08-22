@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,24 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  getUsuarios(){
-    return this.http.get(`${this.API_URI}/usuarios`)
+
+  //Se necescita token para poder obtener todos lo usuarios
+  getUsuarios(token: string ){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'auth': token
+      }),
+      responseType: 'text' as 'json'
+    };
+    return this.http.get(`${this.API_URI}/usuarios`,httpOptions)
+  }
+  addUsuarios(usuario: any){
+    return this.http.post(`${this.API_URI}/usuarios`,usuario)
+  }
+  login(usuario: any){
+    return this.http.post(`${this.API_URI}/auth/login`,usuario)
+  }
+  logout(){
+    localStorage.removeItem('user');
   }
 }

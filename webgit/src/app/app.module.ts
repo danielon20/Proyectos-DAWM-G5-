@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { FilterPipe } from './pipes/filter.pipe';
 
+//import { CheckLoginGuard } from './shared/guards/check-login.guard';
+
 
 import { UsuariosService } from './services/usuarios.service';
 //GRAFICOS
@@ -30,6 +32,8 @@ import { environment } from '../environments/environment';
     SharedModule,
     NgbModule,
     HttpClientModule,
+
+
     //FormsModule,
     //ChartsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

@@ -20,7 +20,7 @@ import { PreciosComponent } from './precios/precios.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { ProcesoComponent } from './proceso/proceso.component';
 
-
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [GeneralPagesComponent,
@@ -37,7 +37,8 @@ import { ProcesoComponent } from './proceso/proceso.component';
     CommonModule,
     FormsModule,
     GeneralPagesRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class GeneralPagesModule { }

@@ -27,7 +27,9 @@
                       <a class="nav-link" routerLink='/admin/estadistica' >Estadisticas</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" routerLink='/' >Cerrar sesión</a>
+                      <a (click)="outSesion()" class="nav-link" routerLink='/' >Cerrar sesión</a>
+                       <!-- En caso que al cerrar sesion quiera redirigirse mejor al login-->
+                      <!--<a (click)="outSesion()" class="nav-link" routerLink='/ingreso' >Cerrar sesión</a>-->
                     </li>
                 </ul>
               </div>
