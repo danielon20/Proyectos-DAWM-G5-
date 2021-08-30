@@ -16,12 +16,18 @@ import { UsuariosService } from './services/usuarios.service';
 //import { ChartsModule } from 'ng2-charts';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PerfilComponent } from './client-pages/perfil/perfil.component';
+import { CursosComponent } from './client-pages/cursos/cursos.component';
+import { VistaCursoComponent } from './client-pages/vista-curso/vista-curso.component';
 //import { GeneralPagesComponent } from './general-pages/general-pages.component';
 //import { AdminPagesComponent } from './admin-pages/admin-pages.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PerfilComponent,
+    CursosComponent,
+    VistaCursoComponent
     //FilterPipe,
     //GeneralPagesComponent,
     //AdminPagesComponent
