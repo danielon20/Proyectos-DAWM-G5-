@@ -10,7 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { CursosComponent } from './cursos/cursos.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { VistaCursoComponent } from './vista-curso/vista-curso.component';
-
+import { TodosCursosClientesComponent } from './todos-cursos-clientes/todos-cursos-clientes.component';
+import { ReportesComponent } from './reportes/reportes.component';
 import { ChartsModule } from 'ng2-charts';
 
 
@@ -19,7 +20,9 @@ import { ChartsModule } from 'ng2-charts';
   declarations: [CursosComponent,
     PerfilComponent,
     VistaCursoComponent,
-    ClientPagesComponent
+    ClientPagesComponent,
+    TodosCursosClientesComponent,
+    ReportesComponent
   ],
   imports: [
     CommonModule,ClientPagesRoutingModule,SharedModule,ChartsModule
