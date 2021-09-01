@@ -59,6 +59,29 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
+.btn{
+
+  font-size: 16px;
+  background-color: #090808;
+  color: #fff;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 3%;
+  padding-top: 5%;
+}
+
+
+
+.btn:hover {
+  background: #8308eb;
+  color: #fff;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -78,7 +101,10 @@ img {
 }
 
 .Courses .titlepage {
+  display: grid;
+  grid-template-columns: auto auto;
   text-align: center;
+  align-content: center;
 }
 
 .Courses .titlepage h2 {

@@ -1,0 +1,30 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+
+
+.btn{
+
+  font-size: 16px;
+  background-color: #090808;
+  color: #fff;
+  width: 100%;
+  max-width: 190px;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+.btn:hover {
+  background: #8308eb;
+  color: #fff;
+}
