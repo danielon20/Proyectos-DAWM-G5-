@@ -22,6 +22,9 @@ export class UsuariosService {
     };
     return this.http.get(`${this.API_URI}/usuarios`,httpOptions)
   }
+  getUserClient(userC: any){
+    return this.http.get(`${this.API_URI}/usuarios/uname/${userC}`)
+  }
   addUsuarios(usuario: any){
     return this.http.post(`${this.API_URI}/usuarios`,usuario)
   }
