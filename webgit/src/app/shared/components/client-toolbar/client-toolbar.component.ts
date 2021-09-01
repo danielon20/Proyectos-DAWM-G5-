@@ -25,7 +25,7 @@ export class ClientToolbarComponent implements OnInit {
     //let imagen = document.getElementById("logo") as HTMLElement
     sidenav?.addEventListener("mouseleave", ()=>{
       sidenav.style.width = "40px"
-      body.style.marginLeft ="10%"
+      body.style.marginLeft ="5%"
       //imagen.style.visibility="hidden"
 
       let menu = document.querySelectorAll(".showMenu")
@@ -36,7 +36,7 @@ export class ClientToolbarComponent implements OnInit {
     })
     sidenav?.addEventListener("mouseover", ()=>{
       sidenav.style.width = "220px"
-      body.style.marginLeft ="20%"
+      body.style.marginLeft ="10%"
     })
   }
   outSesion2(){
