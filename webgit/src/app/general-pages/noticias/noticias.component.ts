@@ -46,7 +46,7 @@ export class NoticiasComponent implements OnInit {
   //constructor() { }
 
   proxy = 'https://damp-beach-17296.herokuapp.com/'
-  url = this.proxy +"https://api.eluniverso.arcpublishing.com/feeds/rss/?website=el-universo&query=taxonomy.sections._id:%22/noticias/economia%22&sort=first_publish_date:desc"
+  url = this.proxy +"https://api.eluniverso.arcpublishing.com/feeds/rss/?website=el-universo&query=taxonomy.sections._id:%22/larevista/tecnologia%22&sort=first_publish_date:desc"
 
   public xmlItems: any;
   constructor(private http:HttpClient) {
