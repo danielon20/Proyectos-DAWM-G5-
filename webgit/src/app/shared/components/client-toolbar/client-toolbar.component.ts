@@ -1,5 +1,6 @@
 import { LogicalProjectPath } from '@angular/compiler-cli/src/ngtsc/file_system';
 import { Component, OnInit } from '@angular/core';
+import { ClientPagesComponent } from 'src/app/client-pages/client-pages.component';
 
 @Component({
   selector: 'app-client-toolbar',
@@ -11,7 +12,6 @@ export class ClientToolbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
     let arrow = document.querySelectorAll(".arrow")
     for(var i=0; i<arrow.length; i++){
       arrow[i].addEventListener("click", (e)=>{
@@ -20,7 +20,7 @@ export class ClientToolbarComponent implements OnInit {
       })
     }
 
-    let body = document.querySelector(".body") as HTMLElement
+    let body = document.querySelector("#layoutSidenav_content") as HTMLElement
     let sidenav = document.querySelector(".nav") as HTMLElement
     //let imagen = document.getElementById("logo") as HTMLElement
     sidenav?.addEventListener("mouseleave", ()=>{
@@ -39,6 +39,5 @@ export class ClientToolbarComponent implements OnInit {
       body.style.marginLeft ="0%"
     })
   }
-  }
-
+}
 
