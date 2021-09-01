@@ -1,6 +1,6 @@
 import { LogicalProjectPath } from '@angular/compiler-cli/src/ngtsc/file_system';
 import { Component, OnInit } from '@angular/core';
-import { ClientPagesComponent } from 'src/app/client-pages/client-pages.component';
+import { UsuariosService } from '../../../services/usuarios.service'
 
 @Component({
   selector: 'app-client-toolbar',
@@ -9,7 +9,7 @@ import { ClientPagesComponent } from 'src/app/client-pages/client-pages.componen
 })
 export class ClientToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usuariosService : UsuariosService) { }
 
   ngOnInit(): void {
     let arrow = document.querySelectorAll(".arrow")
@@ -38,6 +38,9 @@ export class ClientToolbarComponent implements OnInit {
       sidenav.style.width = "220px"
       body.style.marginLeft ="20%"
     })
+  }
+  outSesion2(){
+    this.usuariosService.logout();
   }
 }
 
