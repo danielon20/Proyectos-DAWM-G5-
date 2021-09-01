@@ -86,7 +86,14 @@ export class IngresoComponent implements OnInit {
       res  => {
         localStorage.setItem('user',JSON.stringify(res));
         //console.log(res);
-        this.router.navigate(['/admin']);
+        var stringa = localStorage.getItem('user') || '{}'
+        var json = JSON.parse(stringa)
+        if(json.role='Usuario'){
+          this.router.navigate(['/client']);
+        }
+        else{
+          this.router.navigate(['/admin']);
+        }
       },
       err  => {
         //console.log(err.error.message)
