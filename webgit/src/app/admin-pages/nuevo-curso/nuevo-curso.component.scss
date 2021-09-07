@@ -1,0 +1,127 @@
+.menu-expansion{
+  margin: 2%;
+  background-color: #f4f3ef;
+
+
+
+
+}
+.header{
+    height: 10%;
+    padding-top:1% ;
+    padding-bottom: 1%;
+    background-color: #1cc7ea;
+}
+
+.toolbarP{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-items: end;
+  margin-top: 2%;
+}
+
+.iconosTodos{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: end;
+
+
+
+}
+
+.iconosT{
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+mat-panel-title{
+    color:white;
+    background-color: #1cc7ea;
+
+}
+
+.header:hover{
+  color:white;
+  background-color: #1cc7ea;
+
+}
+
+
+
+.expasion-body{
+    padding-top: 2%;
+}
+
+mat-form-field{
+    margin-left: 5px;
+}
+
+.form-container{
+    display: flex;
+    margin-bottom: 1%;
+}
+
+.input-izq, .input-der{
+  width: 45%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: start;
+  justify-content: space-between;
+
+}
+
+.input-izq{
+    margin-right: 3%;
+}
+
+#seleccion{
+
+  width: 161px;
+}
+
+div[class^="input"] input{
+    float: right;
+
+}
+
+
+
+#botones_finales:hover{
+  background-color: #fcc468;
+  border: 1px solid #fcc468;
+
+}
+
+label{
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+}
+
+h1{
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+}
+
+#botones_finales{
+  justify-content: center;
+  border: 1px solid #1cc7ea; /*anchura, estilo y color borde*/
+  padding: 10px; /*espacio alrededor texto*/
+  background-color: #1cc7ea; /*color botón*/
+  color: black; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  text-transform: uppercase; /*capitalización texto*/
+  font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+  border-radius: 10px; /*bordes redondos*/
+  margin-top: 3%;
+  width: 40%;
+  margin-bottom: 10%;
+}
+
+#div_final{
+  text-align: center;
+}
+
+
