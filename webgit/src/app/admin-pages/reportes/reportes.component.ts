@@ -7,15 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportesComponent implements OnInit {
   
-  constructor() { }
-
-  ngOnInit(): void {
-    this.loadUsers();
+  constructor() { 
+    //this.loadUsers();
   }
 
-  loadUsers() {
-    window.onload = () => {
-      fetch("http://localhost:3002/usuarios/rol/user")
+  
+  ngOnInit(): void {
+    fetch("http://localhost:3002/usuarios/rol/user")
       .then(res => res.json())
       .then(clientes => {
         console.log(clientes)
@@ -58,8 +56,16 @@ export class ReportesComponent implements OnInit {
               }
             });
           }            
-        });       
+        });
+      }
+    //this.loadUsers();
+  }
+  /*
+  loadUsers() {
+    window.onload = () => {
+      f       
       }  
     }  
   }
+  */
 }
