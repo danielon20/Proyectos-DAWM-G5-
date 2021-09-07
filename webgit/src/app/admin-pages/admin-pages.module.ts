@@ -12,6 +12,7 @@ import { AdministradorComponent } from './administrador/administrador.component'
 import { MisCursosComponent } from './mis-cursos/mis-cursos.component';
 import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { NuevoCursoComponent } from './nuevo-curso/nuevo-curso.component';
 
 import { ChartsModule } from 'ng2-charts';
 
@@ -22,7 +23,8 @@ import { ChartsModule } from 'ng2-charts';
     MisCursosComponent,
     EstadisticasComponent,
     AdminPagesComponent,
-    ReportesComponent
+    ReportesComponent,
+    NuevoCursoComponent
   ],
   imports: [
     CommonModule,AdminPagesRoutingModule,SharedModule,ChartsModule,NgbModule

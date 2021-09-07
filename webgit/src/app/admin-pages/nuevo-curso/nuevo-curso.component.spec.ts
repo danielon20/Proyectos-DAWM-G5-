@@ -4,7 +4,7 @@ import { NuevoCursoComponent } from './nuevo-curso.component';
 
 
 
-describe('MisCursosComponent', () => {
+describe('NuevoCursoComponent', () => {
   let component: NuevoCursoComponent;
   let fixture: ComponentFixture<NuevoCursoComponent>;
 
