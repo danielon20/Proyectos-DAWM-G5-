@@ -1,22 +1,25 @@
 <!--<app-headerdos></app-headerdos-->
 <div class="container border">
   <div class="row align-items-center justify-content-center align-items-center">
-    <div class="col-lg-4">
-      <h2 style="text-align: center;">Cursos ofrecidos</h2>
-      <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">SQL</div>
-        <div class="card-body">
-          <img src="../../../assets/sql.png">
+    <div class="col-lg-6">
+      <h2 style="text-align: center;">Contactos recibidos</h2>
+      <div id="estat">
+        <div class="flex">
+          <div class="flex-item">
+            <div style="display: block;">
+            <canvas baseChart width="400" height="400"
+                        [datasets]="lineChartData2"
+                        [labels]="lineChartLabels2"
+                        [options]="lineChartOptions2"
+                        [colors]="lineChartColors2"
+                        [legend]="lineChartLegend2"
+                        [chartType]="lineChartType2"
+                        (chartHover)="chartHovered2($event)"
+                        (chartClick)="chartClicked2($event)"></canvas>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">HTML</div>
-        <div class="card-body">
-          <img src="../../../assets/cursoHTML.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
 
     </div>
     <div class="col-lg-6">
