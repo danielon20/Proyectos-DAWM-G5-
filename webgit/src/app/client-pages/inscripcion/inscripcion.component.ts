@@ -22,7 +22,7 @@ export class InscripcionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-     
+
     var stringa = localStorage.getItem('user') || '{}'
     var json = JSON.parse(stringa)
     //Imprime el username que esta guardado en el localStorage
@@ -52,25 +52,25 @@ export class InscripcionComponent implements OnInit {
       .then(res => res.json())
       .then(registrados => {
         var ids: any[] = [];
-        
+
         for(let j=0; j<registrados.length; j++){
-          ids.push(registrados[j]["id_curso"]);     
+          ids.push(registrados[j]["id_curso"]);
         }
 
         cursos.forEach((element: { id: any; }) => {
           var cond = ids.indexOf(element.id) == -1;
-          
+
           if(cond){
             this.cursosItems.push(element);
           }
-        });      
+        });
       })
     })
   }
   
   async submitNewInscripcion(curso: any){
     Swal.fire({
-      title:'¿Desea inscribirse al curso ' + curso.nombre + ' ?',
+      title:'¿Desea inscribirse al curso ' + curso.nombre + '?',
       text:'Este curso tiene un valor de $' + curso.precio + '. Deberá ponerse en contacto lo más pronto posible con el administrador para gestionar su pago.',
       icon:'warning',
       showCancelButton:true,

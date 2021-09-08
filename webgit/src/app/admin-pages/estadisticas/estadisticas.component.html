@@ -3,7 +3,7 @@
   <div class="row align-items-center justify-content-center align-items-center">
     <div class="col-lg-6">
       <h2 style="text-align: center;">Contactos recibidos</h2>
-      <div id="estat">
+      <div>
         <div class="flex">
           <div class="flex-item">
             <div style="display: block;">
@@ -24,7 +24,7 @@
     </div>
     <div class="col-lg-6">
       <h2 style="text-align: center;">Estudiantes registrados</h2>
-      <div id="estat">
+      <div >
         <div class="flex">
           <div class="flex-item">
             <div style="display: block;">
@@ -39,22 +39,6 @@
                         (chartHover)="chartHovered($event)"
                         (chartClick)="chartClicked($event)"></canvas>
             </div>
-          </div>
-          <div class="flex-item">
-            <!--
-            <table class="table table-responsive table-condensed">
-              <tr>
-                <th *ngFor="let label of lineChartLabels">{{label}}</th>
-              </tr>
-              <tr *ngFor="let d of lineChartData; let i=index" [class]="'line-'+i">
-                <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
-              </tr>
-            </table>
-            <button mat-button mat-raised-button color="primary" (click)="randomize()">Randomize</button>
-            <button mat-button mat-raised-button color="primary" (click)="pushOne()">Push</button>
-            <button mat-button mat-raised-button color="primary" (click)="changeColor()">Recolor</button>
-            <button mat-button mat-raised-button color="primary" (click)="hideOne()">Toggle Series B</button>
-            <button mat-button mat-raised-button color="primary" (click)="changeLabel()">Change Label</button>-->
           </div>
         </div>
       </div>

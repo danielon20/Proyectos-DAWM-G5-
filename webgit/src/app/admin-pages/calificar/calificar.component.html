@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <div class="titlepage">
             <h2>ESTUDIANTES EN EL CURSO </h2>
-            <button type="button" class="btn  btn-outline-secondary" routerLink='/admin/mis-cursos'>Regresar</button>
+            <button type="button" class="btn  btn-outline-secondary" routerLink='/admin/mis-cursos' (click)="remover()">Regresar</button>
             <hr>
           </div>
        </div>
@@ -15,7 +15,7 @@
         <div id="tabla">
           <table class="table">
             <thead class="table-warning">
-              <tr>
+              <tr >
                 <th scope="col">Usuario</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
@@ -24,11 +24,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">usuario1</th>
-                <td>nombre1</td>
-                <td>apellido1</td>
-                <td scope="row" width="9%"><input id="cali"></td>
+              <tr *ngFor="let estudiante of estudiantes_finales">
+                <th scope="row">{{estudiante.usuario}}</th>
+                <td>{{estudiante.nombre}}</td>
+                <td>{{estudiante.apellido}}</td>
+                <td scope="row" width="9%"><input id="cali" placeholder="{{estudiante.calificacion}}"></td>
                 <td><button class="btn2"> Actualizar
 
 

@@ -16,6 +16,8 @@ export class MisCursosComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+
     fetch("http://localhost:3002/cursos")
     .then(data=>data.json())
     .then(data=>{
@@ -44,6 +46,17 @@ export class MisCursosComponent implements OnInit {
       }
 
   })
+
+  }
+
+  guardarcurso(index:any){
+
+
+    console.log("hola")
+    var idstringa=index.toString()
+    console.log(idstringa);
+
+    localStorage.setItem('idCurso',idstringa);
 
   }
 
