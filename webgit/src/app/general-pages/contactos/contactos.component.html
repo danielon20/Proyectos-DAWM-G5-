@@ -24,12 +24,12 @@
                         <form class="main_form" >
                           <div class="row">
                             <div class="col-sm-12">
-                              <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required"
-                                name="Name" data-title="Nombres"
+                              <input class="contactus" placeholder="Nombre y Apellidos" type="text" required
+                                name="Name" id="nombre" data-title="Nombres"
                                 data-intro="Aqui ingresa los nombres con los que estás registrado en el correo.">
                             </div>
                             <div class="col-sm-12">
-                              <input class="contactus" placeholder="Celular" type="text" required="required"
+                              <input class="contactus" placeholder="Celular" type="text" required
                                 name="Phone" data-title="Celular"
                                 data-intro="Ingresa aquí tu número celular donde te gustaría recibir información de nuestros cursos en oferta.">
                             </div>
@@ -38,7 +38,7 @@
                                 <FONT SIZE=4><u>Género:</u></FONT>
                               </label>
                               <br>
-                              <input type="radio" id="masculino" name="gender" value="masculino">
+                              <input type="radio" id="masculino" name="gender" selected value="masculino">
                               <label style="color:white" for="masculino">
                                 <FONT SIZE=3> Masculino</FONT>
                               </label><br>
@@ -56,7 +56,7 @@
                               <label style="color:white" for="fecha">
                                 <FONT SIZE=4><u>Fecha de nacimiento:</u></FONT>
                               </label>
-                              <input class="contactus" placeholder="Fecha" type="date" required="required" name="Date">
+                              <input class="contactus" placeholder="Fecha" type="date" required name="Date">
                             </div>
                             <div class="col-sm-12">
                               <label style="color:white" for="lugarO">
@@ -87,15 +87,15 @@
                             </div>
                             <div class="col-sm-12" data-title="Correo"
                               data-intro="Ingresa tu correo donde podamos contactarte.">
-                              <input class="contactus" placeholder="Email" type="text" required="required"
-                                name=" Email">
+                              <input class="contactus" placeholder="Email" type="text" required
+                                name=" Email" id="correo">
                             </div>
                             <div class="col-sm-12" data-title="Detalles"
                               data-intro="¿Por qué motivos nos escribes?, deseas recibir información de un curso, ¿cuál?  ¿Quieres formar parte de nuestro equipo? Cuéntanos, dobre ti.">
-                              <textarea class="textarea" placeholder="Detalles" type="text" name="Message"></textarea>
+                              <textarea class="textarea" placeholder="Detalles" type="text" required name="Message"></textarea>
                             </div>
                             <div class="col-sm-12">
-                              <button class="send">Enviar</button>
+                              <button type="submit" class="send" (click)="enviarInfo()">Enviar</button>
                             </div>
                           </div>
                         </form>
