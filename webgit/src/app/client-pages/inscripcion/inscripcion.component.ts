@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../../services/usuarios.service';
+import { Router } from '@angular/router';
 //import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 export interface DialogData {
@@ -16,7 +17,7 @@ export class InscripcionComponent implements OnInit {
   cursosItems: Array<any> = [];
   //nombre_curso: string;
 
-  constructor(private usuariosService : UsuariosService) {
+  constructor(private usuariosService : UsuariosService, private router:Router) {
     //this.loadCursos();
    }
 
@@ -55,25 +56,41 @@ export class InscripcionComponent implements OnInit {
           ids.push(registrados[j]["id_curso"]);     
         }
 
-        console.log(ids);
+        //console.log(ids);
         cursos.forEach((element: { id: any; }) => {
           var cond = ids.indexOf(element.id) == -1;
-          console.log(ids.indexOf(element.id))
-          console.log(cond);
+          //console.log(ids.indexOf(element.id))
+          console.log(element);
           
           if(cond){
             this.cursosItems.push(element);
           }
-        });
-    
-        
-        
-          
+        });      
       })
-      //this.cursosItems = cursos;
     })
 
 
+  }
+
+  async submitNewInscripcion(){
+    //console.log((document.getElementById("nombreCurso")as HTMLInputElement).value);
+    console.log((document.getElementById("idCurso")as HTMLInputElement).value)
+    /*
+    let resultado = await fetch("http://localhost:3002/registro_cursos",{
+      method: "POST",
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        id_curso:(document.getElementById("idCurso")as HTMLInputElement).value,
+        id_usuario:this.id,
+        //fecha_registro: new Date(Date.now()).toISOString(),
+        fecha_registro: new Date(Date.now()),
+        calificacion: 0
+      })
+    })
+    console.log(resultado)
+    */
+    
+    //this.router.navigateByUrl("/client/todos-cursos-clientes")
   }
 
 }
