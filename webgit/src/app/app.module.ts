@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialogModule } from '@angular/material/dialog';
 //import { FilterPipe } from './pipes/filter.pipe';
 
 //import { CheckLoginGuard } from './shared/guards/check-login.guard';
@@ -34,7 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     NgbModule,
     HttpClientModule,
-
+    MatDialogModule,
 
     //FormsModule,
     //ChartsModule,

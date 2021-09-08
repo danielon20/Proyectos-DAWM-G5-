@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Router } from '@angular/router';
-//import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import Swal from 'sweetalert2'
 
 export interface DialogData {
   curso: string;
@@ -67,22 +67,35 @@ export class InscripcionComponent implements OnInit {
       })
     })
   }
-
-  async submitNewInscripcion(cursoid: any){
-    console.log(cursoid)
-    let resultado = await fetch("http://localhost:3002/registro_curso",{
-      method: "POST",
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        id_curso: parseInt(cursoid),
-        id_usuario:this.id,
-        fecha_registro: new Date(Date.now()).toISOString(),
-        calificacion: 0
-      })
+  
+  async submitNewInscripcion(curso: any){
+    Swal.fire({
+      title:'¿Desea inscribirse al curso ' + curso.nombre + '?',
+      text:'Este curso tiene un valor de $' + curso.precio + '. Deberá ponerse en contacto lo más pronto posible con el administrador para gestionar su pago.',
+      icon:'warning',
+      showCancelButton:true,
+      confirmButtonColor:'#3085d6',
+      cancelButtonColor:'#d33',
+      confirmButtonText:'Inscribirme'
     })
-    console.log(resultado)
+    .then(respuesta => {
+      //Código de Borrado de tu API
+      if(respuesta.isConfirmed){
+        let resultado = fetch("http://localhost:3002/registro_curso",{
+          method: "POST",
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            id_curso: parseInt(curso.id),
+            id_usuario:this.id,
+            fecha_registro: new Date(Date.now()).toISOString(),
+            calificacion: 0
+          })
+        }) 
+        Swal.fire('¡Inscrito!','La inscripción se ha realizado exitosamente','success');
+        this.router.navigateByUrl("/client/todos-cursos-clientes");   
+     }   
+    })
 
-    this.router.navigateByUrl("/client/todos-cursos-clientes")
   }
 
 
