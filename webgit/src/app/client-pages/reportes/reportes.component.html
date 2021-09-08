@@ -1,3 +1,25 @@
-<div>
-  reportes
-</div>
+<!--<app-headerdos></app-headerdos-->
+  <div class="container border">
+      <div class="col-lg-8">
+        <h2 style="text-align: center;">MIS CURSOS</h2>
+        <div id="estat">
+          <div class="flex">
+            <div class="flex-item">
+              <div style="display: block;">
+              <canvas baseChart width="400" height="400"
+                          [datasets]="lineChartData"
+                          [labels]="lineChartLabels"
+                          [options]="lineChartOptions"
+                          [colors]="lineChartColors"
+                          [legend]="lineChartLegend"
+                          [chartType]="lineChartType"
+
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+

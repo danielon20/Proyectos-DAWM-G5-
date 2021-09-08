@@ -43,6 +43,14 @@
       <div class="sign-up-htm">
         <form [formGroup]="miFormulario2" (ngSubmit)="miSubmit2()" novalidate="">
           <div class="group">
+            <label for="name" class="label">Nombres</label>
+            <input id="name" type="text" class="input" name="name" formControlName="name">
+          </div>
+          <div class="group">
+            <label for="apellido" class="label">Apellidos</label>
+            <input id="apellido" type="text" class="input" name="apellido" formControlName="apellido">
+          </div>
+          <div class="group">
             <label for="user" class="label">Username</label>
             <input id="user" type="text" class="input" name="usuario" formControlName="usuario">
           </div>
