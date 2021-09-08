@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box !important;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #666666;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.80857;
+  font-weight: normal;
+}
+
+
+h1,
+h2 {
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: normal;
+  color: #111111;
+  margin: 0
+}
+
+h1 {
+  font-size: xx-large;
+  color: white;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 22px
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#tabla{
+  padding: 4% 0% 4% 0%;
+}
+
+h2 {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  font-size: 40px;
+  color: #0d0f38;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+
+  font-size: 16px;
+  background-color: #090808;
+  color: #fff;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 3%;
+  padding-top: 5%;
+}
+
+
+
+.btn:hover {
+  background: #8308eb;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus {
+  outline: 0;
+}
+/////
+
+/** Courses section **/
+
+.Courses {
+  margin-top: 0px;
+  padding: 60px 0;
+  background: #fff;
+}
+
+.Courses .titlepage {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+  align-content: center;
+}
+
+.Courses .titlepage h2 {
+  color: #0d0f38;
+  //font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 1%;
+}
+

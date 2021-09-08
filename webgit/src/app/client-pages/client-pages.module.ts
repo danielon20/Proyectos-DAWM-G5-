@@ -13,6 +13,7 @@ import { TodosCursosClientesComponent } from './todos-cursos-clientes/todos-curs
 import { ReportesComponent } from './reportes/reportes.component';
 import { ChartsModule } from 'ng2-charts';
 import { InscripcionComponent } from './inscripcion/inscripcion.component';
+import { InscriFormComponent } from './inscri-form/inscri-form.component';
 
 
 
@@ -24,7 +25,8 @@ import { InscripcionComponent } from './inscripcion/inscripcion.component';
     ClientPagesComponent,
     TodosCursosClientesComponent,
     ReportesComponent,
-    InscripcionComponent
+    InscripcionComponent,
+    InscriFormComponent
   ],
   imports: [
     CommonModule,ClientPagesRoutingModule,SharedModule,ChartsModule

@@ -28,6 +28,8 @@ export class IngresoComponent implements OnInit {
     });
     this.miFormulario2 = new FormGroup({
       'usuario': new FormControl(),
+      'name': new FormControl(),
+      'apellido': new FormControl(),
       'contrasena': new FormControl(),
       'contrasena2': new FormControl(),
       'correo': new FormControl()
@@ -37,8 +39,11 @@ export class IngresoComponent implements OnInit {
    }
 
    miSubmit2() {
-    //console.log(this.miFormulario2.value);
+    console.log(this.miFormulario2.value);
+
     const elUser = {"usuario": this.miFormulario2.value.usuario,
+                    "name": this.miFormulario2.value.name,
+                    "apellido": this.miFormulario2.value.apellido,
                     "contrasena": this.miFormulario2.value.contrasena,
                     "correo" : this.miFormulario2.value.correo
     }
