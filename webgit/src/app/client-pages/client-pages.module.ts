@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ClientPagesRoutingModule } from './client-pages–routing.module';
 import { ClientPagesComponent } from './client-pages.component';
@@ -29,7 +30,7 @@ import { InscriFormComponent } from './inscri-form/inscri-form.component';
     InscriFormComponent
   ],
   imports: [
-    CommonModule,ClientPagesRoutingModule,SharedModule,ChartsModule
+    CommonModule,ClientPagesRoutingModule,SharedModule,ChartsModule,MatDialogModule
   ]
 })
 export class ClientPagesModule { }
