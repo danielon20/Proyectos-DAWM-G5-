@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reportes.component.scss']
 })
 export class ReportesComponent implements OnInit {
-  
-  constructor() { 
+
+  constructor() {
     //this.loadUsers();
   }
 
-  
+
   ngOnInit(): void {
     fetch("http://localhost:3002/usuarios/rol/user")
       .then(res => res.json())
@@ -41,21 +41,21 @@ export class ReportesComponent implements OnInit {
 
               if (tbody) {
                 tbody.innerHTML = "";
-                
+
                 for(let reporte of reportes){
-                  let row = 
+                  let row =
                     `<tr>
                       <td>${reporte["idFactura"]}</td>
-                      <td>${reporte["fechaFactura"]}</td>                       
+                      <td>${reporte["fechaFactura"]}</td>
                       <td>${reporte["idServicio"]}</td>
                       <td>${reporte["precio"]}</td>
                     </tr>`
                   tbody.innerHTML += row;
                 }
-                
+
               }
             });
-          }            
+          }
         });
       }
     //this.loadUsers();
@@ -63,9 +63,9 @@ export class ReportesComponent implements OnInit {
   /*
   loadUsers() {
     window.onload = () => {
-      f       
-      }  
-    }  
+      f
+      }
+    }
   }
   */
 }

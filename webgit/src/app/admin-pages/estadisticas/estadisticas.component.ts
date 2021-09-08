@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
+import { Label } from 'ng2-charts';
 //import * as pluginAnnotations from 'chartjs-plugin-annotation';
 
 @Component({
@@ -11,7 +12,7 @@ import { ChartType } from 'chart.js';
 export class EstadisticasComponent implements OnInit {
 
   public lineChartData: Array<any> =[];
-  public lineChartData2: Array<any> =[];
+  public lineChartData2: Array<any> =[{ data: [], label:'Contactos por mes durante el actual año'}];
   /*
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Curso de HTML' },
@@ -84,14 +85,6 @@ export class EstadisticasComponent implements OnInit {
   ];
   public lineChartColors2: Array<any> = [
     {
-      backgroundColor: 'rgba(82, 157, 58,0.5)',
-      borderColor: 'green',
-      pointBackgroundColor: 'rgba(5.5, 22.4, 0,1)',
-      pointBorderColor: '#1A5B06',
-      pointHoverBackgroundColor: '#1A5B06',
-      pointHoverBorderColor: 'rgba(5.5, 22.4, 0,1)'
-    },
-    {
       backgroundColor: 'rgba(91, 60, 173,0.5)',
       borderColor: '#4B3388',
       pointBackgroundColor: 'rgba(77,83,96,1)',
@@ -106,14 +99,12 @@ export class EstadisticasComponent implements OnInit {
   public lineChartType: ChartType = 'bar';
   //public lineChartPlugins = [pluginAnnotations];
   public lineChartLegend2= true;
-  public lineChartType2: ChartType = 'line';
+  public lineChartType2: ChartType = 'bar';
 
 
   constructor() {
-    this.graficoCursos();
     this.graficoContactos();
-
-
+    this.graficoCursos();
   }
 
   graficoContactos(){
@@ -121,8 +112,8 @@ export class EstadisticasComponent implements OnInit {
     .then(data=>data.json())
     .then(data=>{
       console.log(data);
-      var collection:any={data:[0,0,0,0,0,0,0,0,0,0,0,0], label:'Contactos por mes durante el actual año'};
-      console.log(collection)
+      //var collection:any={data:[0,0,0,0,0,0,0,0,0,0,0,0], label:'Contactos por mes durante el actual año'};
+      //console.log(collection)
       data.forEach((element: { fecha: any; }) => {
         var fecha=element.fecha;
         fecha=fecha.split("T");
@@ -131,60 +122,117 @@ export class EstadisticasComponent implements OnInit {
         fecha=fecha[1];
         switch(fecha) {
           case "01": {
-             collection['data'][0]++;
+            if(this.lineChartData2[0].data[0]==null){
+              this.lineChartData2[0].data[0]=1
+            }else{
+              this.lineChartData2[0].data[0]++;
+            }
+
              break;
           }
           case "02": {
-            collection['data'][1]++;
+            if(this.lineChartData2[0].data[1]==null){
+              this.lineChartData2[0].data[1]=1;
+            }else{
+              this.lineChartData2[0].data[1]++;
+            }
              break;
           }
           case "03": {
-            collection['data'][2]++;
+            if(this.lineChartData2[0].data[2]==null){
+              this.lineChartData2[0].data[2]=1
+            }else{
+              this.lineChartData2[0].data[2]++;
+            }
             break;
           }
           case "04": {
-            collection['data'][3]++;
+            if(this.lineChartData2[0].data[3]==null){
+              this.lineChartData2[0].data[3]=1;
+            }else{
+              this.lineChartData2[0].data[3]++;
+            }
             break;
           }
           case "05": {
-            collection['data'][4]++;
+            if(this.lineChartData2[0].data[4]==null){
+              this.lineChartData2[0].data[4]=1
+            }else{
+              this.lineChartData2[0].data[4]++;
+            }
             break;
           }
           case "06": {
-            collection['data'][5]++;
+            if( this.lineChartData2[0].data[5]==null){
+              this.lineChartData2[0].data[5]=1;
+            }else{
+              this.lineChartData2[0].data[5]++;
+            }
+
             break;
           }
           case "07": {
-            collection['data'][6]++;
+            if(this.lineChartData2[0].data[6]==null){
+              this.lineChartData2[0].data[6]=1;
+            }else{
+              this.lineChartData2[0].data[6]++;
+            }
+
             break;
           }
           case "08": {
-            collection['data'][7]++;
+            if(this.lineChartData2[0].data[7]==null){
+              this.lineChartData2[0].data[7]=1;
+            }else{
+              this.lineChartData2[0].data[7]++;
+            }
+
             break;
           }
           case "09": {
-            collection['data'][8]++;
+            if( this.lineChartData2[0].data[8]==null){
+              this.lineChartData2[0].data[8]=1;
+            }else{
+              this.lineChartData2[0].data[8]++;
+            }
+
             break;
           }
           case "10": {
-            collection['data'][9]++;
+            if(this.lineChartData2[0].data[9]==null){
+              this.lineChartData2[0].data[9]=1;
+            }else{
+              this.lineChartData2[0].data[9]++;
+            }
+
             break;
           }
           case "11": {
-            collection['data'][10]++;
+            if(this.lineChartData2[0].data[10]==null){
+              this.lineChartData2[0].data[10]=1;
+            }else{
+              this.lineChartData2[0].data[10]++;
+            }
+
             break;
           }
           case "12": {
-            collection['data'][11]++;
+            if( this.lineChartData2[0].data[11]==null){
+              this.lineChartData2[0].data[11]=1;
+            }else{
+              this.lineChartData2[0].data[11]++;
+            }
             break;
           }
        }
 
       });
+      console.log( this.lineChartData2[0]);
 
-      console.log(collection)
+
+      //console.log(collection)
       console.log(this.lineChartData2)
-      this.lineChartData2.push(collection);
+      //this.lineChartData2.push(collection);
     })
   }
 
@@ -206,6 +254,8 @@ export class EstadisticasComponent implements OnInit {
       this.lineChartData.push(colection);
       /*console.log(colection)
       console.log(this.lineChartData)*/
+
+      console.log(this.lineChartData[0]);
     })
   }
 
@@ -221,6 +271,7 @@ export class EstadisticasComponent implements OnInit {
   public chartHovered(e:any):void{
     //console.log(e);
   }
+
   public chartClicked2(e:any):void{
     //console.log(e);
   }
