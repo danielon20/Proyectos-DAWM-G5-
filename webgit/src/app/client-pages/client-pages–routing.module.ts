@@ -8,6 +8,7 @@ import { TodosCursosClientesComponent} from './todos-cursos-clientes/todos-curso
 import { ReportesComponent } from './reportes/reportes.component';
 import { InscripcionComponent } from "./inscripcion/inscripcion.component";
 import { ClientPagesComponent } from './client-pages.component';
+import { InscriFormComponent } from './inscri-form/inscri-form.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path:"vista-curso", component:VistaCursoComponent},
     {path:"todos-cursos-clientes", component:TodosCursosClientesComponent},
     {path:"reportes", component:ReportesComponent},
-    {path:"inscripciones", component:InscripcionComponent}
+    {path:"inscripciones", component:InscripcionComponent},
+    {path:"inscri-form", component:InscriFormComponent}
   ]
   }
 ];

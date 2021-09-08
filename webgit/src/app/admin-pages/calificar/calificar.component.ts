@@ -67,4 +67,8 @@ export class CalificarComponent implements OnInit {
   remover(){
     localStorage.setItem("idCurso","1");
   }
+
+  actualizar(){
+
+  }
 }

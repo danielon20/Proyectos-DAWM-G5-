@@ -12,4 +12,8 @@ export class InscriFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cambiarContrasena(){
+
+  }
+
 }
