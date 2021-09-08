@@ -15,6 +15,7 @@ import { ReportesComponent } from './reportes/reportes.component';
 import { NuevoCursoComponent } from './nuevo-curso/nuevo-curso.component';
 
 import { ChartsModule } from 'ng2-charts';
+import { CalificarComponent } from './calificar/calificar.component';
 
 
 
@@ -24,7 +25,8 @@ import { ChartsModule } from 'ng2-charts';
     EstadisticasComponent,
     AdminPagesComponent,
     ReportesComponent,
-    NuevoCursoComponent
+    NuevoCursoComponent,
+    CalificarComponent
   ],
   imports: [
     CommonModule,AdminPagesRoutingModule,SharedModule,ChartsModule,NgbModule
