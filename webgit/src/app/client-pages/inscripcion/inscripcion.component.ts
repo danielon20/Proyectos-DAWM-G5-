@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../../services/usuarios.service';
+import { Router } from '@angular/router';
 //import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 export interface DialogData {
@@ -16,11 +17,12 @@ export class InscripcionComponent implements OnInit {
   cursosItems: Array<any> = [];
   //nombre_curso: string;
 
-  constructor(private usuariosService : UsuariosService) {
+  constructor(private usuariosService : UsuariosService, private router:Router) {
     //this.loadCursos();
    }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
+     
     var stringa = localStorage.getItem('user') || '{}'
     var json = JSON.parse(stringa)
     //Imprime el username que esta guardado en el localStorage
@@ -55,25 +57,33 @@ export class InscripcionComponent implements OnInit {
           ids.push(registrados[j]["id_curso"]);     
         }
 
-        console.log(ids);
         cursos.forEach((element: { id: any; }) => {
           var cond = ids.indexOf(element.id) == -1;
-          console.log(ids.indexOf(element.id))
-          console.log(cond);
           
           if(cond){
             this.cursosItems.push(element);
           }
-        });
-    
-        
-        
-          
+        });      
       })
-      //this.cursosItems = cursos;
     })
-
-
+  }
+  
+  async submitNewInscripcion(cursoid: any){
+    
+    let resultado = await fetch("http://localhost:3002/registro_curso",{
+      method: "POST",
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        id_curso: parseInt(cursoid),
+        id_usuario:this.id,
+        fecha_registro: new Date(Date.now()).toISOString(),
+        calificacion: 0
+      })
+    })
+    console.log(resultado)
+    
+    this.router.navigateByUrl("/client/todos-cursos-clientes")
   }
 
+  
 }
