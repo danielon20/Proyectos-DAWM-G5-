@@ -41,7 +41,14 @@ export class EstadisticasComponent implements OnInit {
   };
 
   public lineChartColors: Array<any> = [
-
+    {
+      backgroundColor: 'rgba(82, 157, 58,0.5)',
+      borderColor: 'green',
+      pointBackgroundColor: 'rgba(5.5, 22.4, 0,1)',
+      pointBorderColor: '#1A5B06',
+      pointHoverBackgroundColor: '#1A5B06',
+      pointHoverBorderColor: 'rgba(5.5, 22.4, 0,1)'
+    },
     {
       backgroundColor: 'rgba(91, 60, 173,0.5)',
       borderColor: '#4B3388',
@@ -93,8 +100,6 @@ export class EstadisticasComponent implements OnInit {
   public chartHovered(e:any):void{
     //console.log(e);
   }
-
-
 
 
 }
