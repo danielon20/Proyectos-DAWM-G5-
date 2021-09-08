@@ -22,7 +22,7 @@ export class InscripcionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-     
+
     var stringa = localStorage.getItem('user') || '{}'
     var json = JSON.parse(stringa)
     //Imprime el username que esta guardado en el localStorage
@@ -52,24 +52,24 @@ export class InscripcionComponent implements OnInit {
       .then(res => res.json())
       .then(registrados => {
         var ids: any[] = [];
-        
+
         for(let j=0; j<registrados.length; j++){
-          ids.push(registrados[j]["id_curso"]);     
+          ids.push(registrados[j]["id_curso"]);
         }
 
         cursos.forEach((element: { id: any; }) => {
           var cond = ids.indexOf(element.id) == -1;
-          
+
           if(cond){
             this.cursosItems.push(element);
           }
-        });      
+        });
       })
     })
   }
-  
+
   async submitNewInscripcion(cursoid: any){
-    
+    console.log(cursoid)
     let resultado = await fetch("http://localhost:3002/registro_curso",{
       method: "POST",
       headers: {'Content-Type': 'application/json'},
@@ -81,9 +81,9 @@ export class InscripcionComponent implements OnInit {
       })
     })
     console.log(resultado)
-    
+
     this.router.navigateByUrl("/client/todos-cursos-clientes")
   }
 
-  
+
 }

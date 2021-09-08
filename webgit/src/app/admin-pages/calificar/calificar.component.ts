@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Estudiante } from '../Interfacez-admin/estudiante';
 @Component({
   selector: 'app-calificar',
   templateUrl: './calificar.component.html',
@@ -14,43 +14,57 @@ export class CalificarComponent implements OnInit {
   fecha_reg=" "
   curso:any;
   todos_cursos:any;
-  estudiantes:any;
+  estudiantes:any =[];
+  estudiantes_finales:any=[]
   nombre=""
 
 
   constructor(private route: ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(data=>{
-      this.idCurso = data["idCurso"]
-      console.log(this.idCurso)
-    })
-    this.getCurso()
-  }
+    var stringa = localStorage.getItem('idCurso') || '{}'
+    var idCurso_total=parseInt(stringa)
+    console.log(idCurso_total)
+    this.idCurso=idCurso_total
 
-  async getCurso(){
-    await fetch("http://localhost:3002/registro_curso/cursos/"+this.idCurso)
+
+
+
+
+  fetch("http://localhost:3002/registro_curso/cursos/"+this.idCurso)
       .then(data=>data.json())
       .then(data=>{
         this.estudiantes = data
 
-      })
 
-      await fetch("http://localhost:3002/cursos")
-      .then(data=>data.json())
-      .then(data=>{
-        this.todos_cursos=data
+      for(let estu of this.estudiantes){
+      fetch("http://localhost:3002/cursos/"+estu.id_usuario)
+        .then(data=>data.json())
+        .then(data=>{
+           var usuario=data
+          let estu_todo:Estudiante
 
+        estu_todo={
+          id_curso:this.idCurso,
+          id_usuario:estu.id_usuario,
+          fecha:estu.fecha_registro,
+          calificacion:estu.calificacion,
+          nombre:usuario.nombres,
+          apellido:usuario.apellidos,
+          usuario:usuario.usuario,
 
-      })
-
-
-      for(let unocurso of this.todos_cursos){
-        if(unocurso.id==this.idCurso){
-          this.curso=unocurso
         }
-    }
+        this.estudiantes_finales.push(estu_todo)
+        })
+      }
 
-    console.log(this.curso)
+      })
+
+
+    console.log(this.estudiantes_finales)
+  }
+
+  remover(){
+    localStorage.setItem("idCurso","1");
   }
 }
