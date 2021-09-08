@@ -7,10 +7,11 @@
                 <div class="card-body">
                   <h5 class="card-title">{{_curso.nombre}}</h5>
                   <p class="card-text">{{_curso.precio}}</p>
-                  <input id="idCurso" type="hidden" value="{{_curso}}">
+                  
                 </div>
                 <div class="card-footer d-flex justify-content-between">
-                    <button mat-raised-button type="button" (click)="submitNewInscripcion()">Inscribirse</button>
+                    <button mat-raised-button type="button" class="boton" value="{{_curso.id}}" (click)="submitNewInscripcion(_curso.id)" >Inscribirse </button>
+                   
                 </div>
               </div>
             </div>

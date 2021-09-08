@@ -21,7 +21,8 @@ export class InscripcionComponent implements OnInit {
     //this.loadCursos();
    }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
+     
     var stringa = localStorage.getItem('user') || '{}'
     var json = JSON.parse(stringa)
     //Imprime el username que esta guardado en el localStorage
@@ -56,11 +57,8 @@ export class InscripcionComponent implements OnInit {
           ids.push(registrados[j]["id_curso"]);     
         }
 
-        //console.log(ids);
         cursos.forEach((element: { id: any; }) => {
           var cond = ids.indexOf(element.id) == -1;
-          //console.log(ids.indexOf(element.id))
-          console.log(element);
           
           if(cond){
             this.cursosItems.push(element);
@@ -68,29 +66,24 @@ export class InscripcionComponent implements OnInit {
         });      
       })
     })
-
-
   }
-
-  async submitNewInscripcion(){
-    //console.log((document.getElementById("nombreCurso")as HTMLInputElement).value);
-    console.log((document.getElementById("idCurso")as HTMLInputElement).value)
-    /*
-    let resultado = await fetch("http://localhost:3002/registro_cursos",{
+  
+  async submitNewInscripcion(cursoid: any){
+    
+    let resultado = await fetch("http://localhost:3002/registro_curso",{
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        id_curso:(document.getElementById("idCurso")as HTMLInputElement).value,
+        id_curso: parseInt(cursoid),
         id_usuario:this.id,
-        //fecha_registro: new Date(Date.now()).toISOString(),
-        fecha_registro: new Date(Date.now()),
+        fecha_registro: new Date(Date.now()).toISOString(),
         calificacion: 0
       })
     })
     console.log(resultado)
-    */
     
-    //this.router.navigateByUrl("/client/todos-cursos-clientes")
+    this.router.navigateByUrl("/client/todos-cursos-clientes")
   }
 
+  
 }
