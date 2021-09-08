@@ -32,20 +32,19 @@
                 <th scope="col">Precio</th>
                 <th scope="col">Ganancia</th>
                 <th scope="col">Imagen</th>
-                <th scope="col">Fecha</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let curso of cursos">
+              <tr *ngFor="let curso of cursos_nuevos">
                 <th scope="row">{{curso.id}}</th>
                 <td>{{curso.nombre}}</td>
-                <td>{{curso.alumnos}}</td>
-                <td>{{curso.costo}}</td>
+                <td>{{curso.estudiantes}}</td>
+                <td>{{curso.precio}}</td>
                 <td>{{curso.ganancia}}</td>
                 <td>
                   <img src="../../../assets/{{curso.img}}" width="30px" class="img-fluid" alt="{{curso.nombre}}">
                 </td>
-                <td>{{curso.fecha}}</td>
+
               </tr>
             </tbody>
           </table>
