@@ -6,6 +6,7 @@ import { MisCursosComponent } from './mis-cursos/mis-cursos.component';
 import { EstadisticasComponent } from './estadisticas/estadisticas.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { NuevoCursoComponent } from './nuevo-curso/nuevo-curso.component';
+import { CalificarComponent } from './calificar/calificar.component';
 
 import { AdminPagesComponent } from './admin-pages.component'
 
@@ -17,7 +18,8 @@ const routes: Routes = [
     {path:"mis-cursos", component:MisCursosComponent},
     {path:"estadistica", component:EstadisticasComponent},
     {path:"reportes", component:ReportesComponent},
-    {path: "nuevo-curso", component:NuevoCursoComponent}
+    {path: "nuevo-curso", component:NuevoCursoComponent},
+    {path: "calificar", component:CalificarComponent}
   ]
   }
 ];
