@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 
 
 
+
 import { ContactosComponent } from './contactos/contactos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { EquipoDesarrolloComponent } from './equipo-desarrollo/equipo-desarrollo.component';

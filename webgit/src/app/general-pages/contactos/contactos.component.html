@@ -21,7 +21,7 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-md-6 offset-md-3 ">
-                        <form class="main_form">
+                        <form class="main_form" >
                           <div class="row">
                             <div class="col-sm-12">
                               <input class="contactus" placeholder="Nombre y Apellidos" type="text" required="required"
@@ -112,6 +112,21 @@
 </section>
 <!-- end section -->
 
+<form
+  action="https://formspree.io/f/mrgrrdpv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
 <!-- google map js -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
@@ -121,4 +136,28 @@
 <script>
   introJs().setOptions({ 'skipLabel': 'Saltar', 'nextLabel': 'Siguiente', 'prevLabel': 'Anterior', 'doneLabel': 'Finalizar' }).start()
   introJs().start()
+
+  const $form=document.querySelector('#form')
+
+  $form.addEventListener('submit',handleSubmit)
+  async function handleSubmit(event){
+    event.preventDefault()
+    const form =new FormData(this)
+
+    const response = await fetch(this.action, {
+
+      method: "POST",
+      body: form,
+      headers:{
+        'Accept': 'application/json'
+      }
+    })
+
+    if(response.ok){
+      this.reset()
+      alert('Gracias por contactarnos, te escribiré pronto :)')
+    }
+  }
+
+
 </script>
