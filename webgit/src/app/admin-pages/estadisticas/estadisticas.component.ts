@@ -10,11 +10,13 @@ import { ChartType } from 'chart.js';
 })
 export class EstadisticasComponent implements OnInit {
 
+  public lineChartData: Array<any> =[];
+  /*
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Curso de HTML' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Curso de SQL' },
-  ];
-  public lineChartLabels: Array<any> = ['Enero', 'Febrero', 'Marzo', 'April', 'Mayo', 'Junio', 'Julio'];
+  ];*/
+  public lineChartLabels: Array<any> = [];
 
   public lineChartOptions:any={
     responsive:true,
@@ -64,31 +66,40 @@ export class EstadisticasComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor() {
+    fetch("http://localhost:3002/cursos")
+    .then(data=>data.json())
+    .then(data=>{
+      console.log(data);
+      var colection:any={data:[], label:'Estudiantes por materia'};
+
+
+      data.forEach((element: { [x: string]: string; nombre: any;}) => {
+        fetch("http://localhost:3002/registro_curso/cursos/"+element['id'])
+        .then(dat=>dat.json())
+        .then(dat=>{
+          this.lineChartLabels.push(element.nombre);
+          var val:any=dat.length;
+          colection['data'].push(val);
+        })
+      });
+      this.lineChartData.push(colection);
+      console.log(colection)
+    })
+  }
 
   ngOnInit(): void {
 
   }
 
-  public randomize():void{
-    let _lineChartData:Array<any>=new Array(this.lineChartData.length);
-    for(let i=0; i<this.lineChartData.length;i++){
-      _lineChartData[i]={data:new Array(this.lineChartData[i].data.length),label:this.lineChartData[i].label};
-      for(let j=0;j<this.lineChartData[i].data.lenght;j++){
-        _lineChartData[i].data[j]=Math.floor((Math.random()*100)+1);
-      }
-    }
-    this.lineChartData=_lineChartData;
-  }
+
 
   public chartClicked(e:any):void{
-    console.log(e);
+    //console.log(e);
   }
   public chartHovered(e:any):void{
-    console.log(e);
+    //console.log(e);
   }
-
-
 
 
 }
