@@ -30,7 +30,7 @@
                 <p class="card-text">{{cursoE.nombre}}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn  btn-outline-secondary" routerLink='/client/vista-curso'>Ingresar</button>
+                    <button type="button" class="btn  btn-outline-secondary" routerLink='/client/vista-curso' (click)="guardarcurso(cursoE.id)">Ingresar</button>
                     <button type="button" class="btn  btn-outline-secondary" (click)="deleteRegistro(cursoE)">Abandonar</button>
                   </div>
                   <small class="text-muted">Finaliza 13/07/22</small>

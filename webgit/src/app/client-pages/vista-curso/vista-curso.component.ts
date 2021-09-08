@@ -8,59 +8,46 @@ import { UsuariosService } from '../../services/usuarios.service';
 })
 export class VistaCursoComponent implements OnInit {
   public id: string = '';
-  cursosItems: Array<any> = [];
-  constructor(private usuariosService : UsuariosService) { }
+  modulo1: any= [];
+  modulo2: any= [];
+  modulo3: any= [];
+  todos_moduls : Array<any>=[];
+  idCurso:any;
+  nombre_curso="";
+  constructor() { }
 
   ngOnInit(): void {
-    var stringa = localStorage.getItem('user') || '{}'
-    var json = JSON.parse(stringa)
-    //Imprime el username que esta guardado en el localStorage
-    //console.log(json.username)
-    var user = json.username;
-    this.usuariosService.getUserClient(user).subscribe(
-      res  => {
 
-        var str = JSON.stringify(res)
-        var json2 = JSON.parse(str)
+    var stringa = localStorage.getItem('idCursoE') || '{}'
+    var idCurso_total=parseInt(stringa)
+    console.log(idCurso_total)
+    this.idCurso=idCurso_total
 
-        this.id = json2.id;
-      },
-      err  => {
-        console.log(err)
-      }
-    )
 
-    this.loadCursos();
-  }
-
-  loadCursos(){
-    fetch("http://localhost:3002/cursos")
+    fetch("http://localhost:3002/tareas/curso/"+this.idCurso)
     .then(res => res.json())
-    .then(cursos => {
-      fetch("http://localhost:3002/registro_curso/" + this.id)
-      .then(res => res.json())
-      .then(registrados => {
+    .then(data => {
+        this.todos_moduls=data
 
-        var ids: any[] = [];
-
-        for(let j=0; j<registrados.length; j++){
-          ids.push(registrados[j]["id_curso"]);
-        }
-
-
-        cursos.forEach((element: { id: any; }) => {
-          var cond = ids.indexOf(element.id) != -1;
-
-          if(cond){
-            this.cursosItems.push(element);
-          }
-        });
-
-      })
-      //this.cursosItems = cursos;
+        console.log(this.todos_moduls)
+        this.modulo1=this.todos_moduls[0]
+        this.modulo2=this.todos_moduls[1]
+        this.modulo3=this.todos_moduls[2]
+        console.log(this.modulo1)
     })
 
-    console.log(this.cursosItems)
-}
+    fetch("http://localhost:3002/cursos/"+this.idCurso)
+    .then(res => res.json())
+    .then(data => {
+        this.nombre_curso=data.nombre
+        console.log(this.nombre_curso)
+    })
+
+
+
+
+  }
+
+
 
 }
