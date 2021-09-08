@@ -11,6 +11,7 @@
     </div>
 
 
+
       <div>
         <h4 class="mb-3">Datos Generales</h4>
 
@@ -22,26 +23,23 @@
 
             <div class="col-12" id="espacios" >
               <label for="address" class="form-label">Precio del curso</label>
-              <input name="precio" type="text" class="form-control" id="address" placeholder="0" required>
+              <input name="precio" type="text" class="form-control" id="precioC" placeholder="0" required>
             </div>
 
 
 
             <div class="col-12" id="espacios" >
               <label for="address" class="form-label">Descripción del Curso</label>
-              <input name="descripcion" type="text" class="form-control" id="address" required>
+              <input name="descripcion" type="text" class="form-control" id="descC" required>
             </div>
 
 
-            <div class="col-12" id="espacios">
+            <!--<div class="col-12" id="espacios">
               <label for="address" class="form-label">Imágen del curso</label>
 
-              <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
                 <input type="file" name="imagen1" />
                 <input type="submit" name="subir-imagen" value="Enviar imagen" />
-              </form>
-
-            </div>
+            </div>-->
 
 
 
@@ -55,29 +53,29 @@
           <div >
             <div class="col-12">
               <label for="firstName" class="form-label">Nombre del módulo </label>
-              <input type="text" class="form-control" name="nombre1" placeholder="" value="" required>
+              <input type="text" class="form-control" id="nombre1" placeholder="" value="" required>
             </div>
 
 
 
             <div class="col-12">
               <label for="address" class="form-label"> Subtítulo </label>
-              <input type="text" class="form-control" name="subtitulo1"  required>
+              <input type="text" class="form-control" id="subtitulo1"  required>
             </div>
 
             <div class="col-12">
               <label for="address" class="form-label"> Información </label>
-              <input type="text" class="form-control" name="info1"  required>
+              <input type="text" class="form-control" id="info1"  required>
             </div>
 
             <div class="col-12">
               <label for="address" class="form-label"> Link del video </label>
-              <input type="text" class="form-control" name="video1"  required>
+              <input type="text" class="form-control" id="video1"  required>
             </div>
 
             <div class="col-12">
               <label for="address" class="form-label"> Link de la evaluación</label>
-              <input type="text" class="form-control" name="eva1"  required>
+              <input type="text" class="form-control" id="eva1"  required>
             </div>
 
             <hr class="my-5">
@@ -86,29 +84,29 @@
             <div class="row g-3">
               <div class="col-12">
                 <label for="firstName" class="form-label">Nombre del módulo </label>
-                <input type="text" class="form-control" name="nombre2" placeholder="" value="" required>
+                <input type="text" class="form-control" id="nombre2" placeholder="" value="" required>
               </div>
 
 
 
               <div class="col-12">
                 <label for="address" class="form-label"> Subtítulo </label>
-                <input type="text" class="form-control" name="subtitulo2"  required>
+                <input type="text" class="form-control" id="subtitulo2"  required>
               </div>
 
               <div class="col-12">
                 <label for="address" class="form-label"> Información </label>
-                <input type="text" class="form-control" name="info2"  required>
+                <input type="text" class="form-control" id="info2"  required>
               </div>
 
               <div class="col-12">
                 <label for="address" class="form-label"> Link del video </label>
-                <input type="text" class="form-control" name="video2"  required>
+                <input type="text" class="form-control" id="video2"  required>
               </div>
 
               <div class="col-12">
                 <label for="address" class="form-label"> Link de la evaluación</label>
-                <input type="text" class="form-control" name="eva2"  required>
+                <input type="text" class="form-control" id="eva2"  required>
               </div>
 
 
@@ -118,29 +116,29 @@
             <div class="row g-3">
               <div class="col-12">
                 <label for="firstName" class="form-label">Nombre del módulo </label>
-                <input type="text" class="form-control" name="nombre3" placeholder="" value="" required>
+                <input type="text" class="form-control" id="nombre3" placeholder="" value="" required>
               </div>
 
 
 
               <div class="col-12">
                 <label for="address" class="form-label"> Subtítulo </label>
-                <input type="text" class="form-control" name="subtitulo3"  required>
+                <input type="text" class="form-control" id="subtitulo3"  required>
               </div>
 
               <div class="col-12">
                 <label for="address" class="form-label"> Información </label>
-                <input type="text" class="form-control" name="info3"  required>
+                <input type="text" class="form-control" id="info3"  required>
               </div>
 
               <div class="col-12">
                 <label for="address" class="form-label"> Link del video </label>
-                <input type="text" class="form-control" name="video3"  required>
+                <input type="text" class="form-control" id="video3"  required>
               </div>
 
               <div class="col-12">
                 <label for="address" class="form-label"> Link de la evaluación</label>
-                <input type="text" class="form-control" name="eva3"  required>
+                <input type="text" class="form-control" id="eva3"  required>
               </div>
 
               </div>
@@ -149,10 +147,11 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-lg" type="submit">Crear Curso</button>
-          <button class="w-100 btn btn-lg" type="submit" routerLink="/admin/mis-cursos">Regresar a tabla</button>
+          <button class="w-100 btn btn-lg" type="button"  (click)="submitMyCurso()">Crear Curso</button>
+          <button class="w-100 btn btn-lg" type="button" routerLink="/admin/mis-cursos">Regresar a tabla</button>
 
       </div>
+
     </div>
 
 
