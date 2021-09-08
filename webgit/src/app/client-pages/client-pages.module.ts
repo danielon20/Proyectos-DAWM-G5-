@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 import { ClientPagesRoutingModule } from './client-pages–routing.module';
 import { ClientPagesComponent } from './client-pages.component';
 import { SharedModule } from '../shared/shared.module';
@@ -13,6 +12,8 @@ import { VistaCursoComponent } from './vista-curso/vista-curso.component';
 import { TodosCursosClientesComponent } from './todos-cursos-clientes/todos-cursos-clientes.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { ChartsModule } from 'ng2-charts';
+import { InscripcionComponent } from './inscripcion/inscripcion.component';
+
 
 
 
@@ -22,7 +23,8 @@ import { ChartsModule } from 'ng2-charts';
     VistaCursoComponent,
     ClientPagesComponent,
     TodosCursosClientesComponent,
-    ReportesComponent
+    ReportesComponent,
+    InscripcionComponent
   ],
   imports: [
     CommonModule,ClientPagesRoutingModule,SharedModule,ChartsModule

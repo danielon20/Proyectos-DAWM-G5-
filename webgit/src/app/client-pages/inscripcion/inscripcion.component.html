@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div id="cursos-container" class="row row-cols-1 row-cols-md-1 g-4 mx-2 my-2">
+            <!-- Agregar el *ngFor -->
+            <div class="col" *ngFor="let _curso of cursosItems">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">{{_curso.nombre}}</h5>
+                  <p class="card-text">{{_curso.precio}}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button mat-raised-button>Inscribirse</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

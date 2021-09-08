@@ -16,6 +16,7 @@ import { UsuariosService } from './services/usuarios.service';
 //import { ChartsModule } from 'ng2-charts';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //import { GeneralPagesComponent } from './general-pages/general-pages.component';
 //import { AdminPagesComponent } from './admin-pages/admin-pages.component';
@@ -42,7 +43,10 @@ import { environment } from '../environments/environment';
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+
+
+    BrowserAnimationsModule
   ],
 
   providers: [UsuariosService],
