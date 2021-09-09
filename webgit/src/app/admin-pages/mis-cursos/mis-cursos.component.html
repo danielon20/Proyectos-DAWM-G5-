@@ -43,7 +43,7 @@
                 <td>{{curso.precio}}</td>
                 <td>{{curso.ganancia}}</td>
                 <td>
-                  <img src="../../../assets/{{curso.img}}" width="30px" class="img-fluid" alt="{{curso.nombre}}">
+                  <img src="{{curso.linkImagen}}" width="30px" class="img-fluid" alt="{{curso.nombre}}">
                 </td>
                 <td><button padding="5%" routerLink="/admin/calificar" type="button" value="{{curso.id}}"  (click)="guardarcurso(curso.id)" class="btn">
 

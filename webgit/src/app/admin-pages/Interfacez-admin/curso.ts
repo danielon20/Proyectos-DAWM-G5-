@@ -5,4 +5,5 @@ export interface Curso{
   precio:number
   estudiantes:number
   ganancia:number
+  linkImagen:string
 }
