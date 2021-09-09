@@ -3,22 +3,22 @@
 
 
 <main>
-  <div class="tituloCur">
+  <div class="tituloCur" >
 
-    <h1 class="visually-hidden">CURSO TITULO</h1>
+    <h1 class="titulo">Bienvenido al curso de {{nombre_curso}}</h1>
   </div>
 
 
   <div class="container px-4 py-5" id= "modulo">
-    <h2 class="pb-2 border-bottom">MODULO 1: </h2>
+    <h2 class="pb-2 border-bottom">MODULO 1: {{modulo1.titulo}} </h2>
     <div class="row g-4 py-5">
       <div id= "video" class="feature col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/chPhlsHoEPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" id="hola1" allowfullscreen></iframe>
       </div>
         <div id = "contenido"class="feature col">
-          <h2>Subtitulo 1</h2>
-          <p>Texto 1</p>
-          <button type="button" class="btn  btn-outline-secondary" routerLink=''>Evaluación</button>
+          <h2>{{modulo1.subtitulo}}</h2>
+          <p>{{modulo1.descripcion}}</p>
+          <a type="button" class="btn  btn-outline-secondary" href='{{modulo1.linkForms}}'>Evaluación</a>
         </div>
     </div>
   </div>
@@ -26,15 +26,15 @@
   <div class="b-example-divider"></div>
 
   <div class="container px-4 py-5" id= "modulo">
-    <h2 class="pb-2 border-bottom">MODULO 2: </h2>
+    <h2 class="pb-2 border-bottom">MODULO 2: {{modulo2.titulo}}</h2>
     <div class="row g-4 py-5">
       <div id= "video" class="feature col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/chPhlsHoEPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" id="hola2"  allowfullscreen></iframe>
       </div>
         <div id = "contenido"class="feature col">
-          <h2>Subtitulo 1</h2>
-          <p>Texto 1</p>
-          <button type="button" class="btn  btn-outline-secondary" routerLink=''>Evaluación</button>
+          <h2>{{modulo2.subtitulo}}</h2>
+          <p>{{modulo2.descripcion}}</p>
+          <a type="button" class="btn  btn-outline-secondary" href='{{modulo2.linkForms}}'>Evaluación</a>
         </div>
     </div>
   </div>
@@ -42,15 +42,15 @@
   <div class="b-example-divider"></div>
 
   <div class="container px-4 py-5" id= "modulo">
-    <h2 class="pb-2 border-bottom">MODULO 3: </h2>
+    <h2 class="pb-2 border-bottom">MODULO 3: {{modulo3.titulo}}</h2>
     <div class="row g-4 py-5">
       <div id= "video" class="feature col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/chPhlsHoEPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="hola" width="560" height="315"  allowfullscreen></iframe>
       </div>
         <div id = "contenido"class="feature col">
-          <h2>Subtitulo 1</h2>
-          <p>Texto 1</p>
-          <button type="button" class="btn  btn-outline-secondary" routerLink=''>Evaluación</button>
+          <h2>{{modulo3.subtitulo}}</h2>
+          <p>{{modulo3.descripcion}}</p>
+          <a type="button" class="btn  btn-outline-secondary" href='{{modulo3.linkForms}}'>Evaluación</a>
         </div>
     </div>
   </div>

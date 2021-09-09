@@ -38,7 +38,8 @@ export class MisCursosComponent implements OnInit {
             descripcion:"",
             precio:curso.precio,
             estudiantes:data.length,
-            ganancia:data.length*curso.precio
+            ganancia:data.length*curso.precio,
+            linkImagen:curso.linkImagen
 
         }
         this.cursos_nuevos.push(curso_todo)

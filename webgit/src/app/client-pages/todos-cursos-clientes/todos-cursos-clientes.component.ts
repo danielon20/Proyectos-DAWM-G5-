@@ -85,10 +85,21 @@ export class TodosCursosClientesComponent implements OnInit {
           courseId: parseInt(cursoE.id),
           userId:this.id
         })
-      }) 
+      })
       Swal.fire('¡Borrado!','El curso ha sido borrado exitosamente','success');
       this.router.navigateByUrl("/client");
-     }   
+     }
     })
+  }
+
+  guardarcurso(index:any){
+
+
+    console.log("hola")
+    var idstringa=index.toString()
+    console.log(idstringa);
+
+    localStorage.setItem('idCursoE',idstringa);
+
   }
 }

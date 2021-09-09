@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Estudiante } from '../Interfacez-admin/estudiante';
 @Component({
   selector: 'app-calificar',
@@ -9,6 +10,7 @@ import { Estudiante } from '../Interfacez-admin/estudiante';
 export class CalificarComponent implements OnInit {
 
   idCurso:any;
+  nombre_curso=""
   idEstudiante:any;
   calificacion:any;
   fecha_reg=" "
@@ -38,7 +40,7 @@ export class CalificarComponent implements OnInit {
 
 
       for(let estu of this.estudiantes){
-      fetch("http://localhost:3002/cursos/"+estu.id_usuario)
+      fetch("http://localhost:3002/usuarios/"+estu.id_usuario)
         .then(data=>data.json())
         .then(data=>{
            var usuario=data
@@ -60,11 +62,52 @@ export class CalificarComponent implements OnInit {
 
       })
 
+    fetch("http://localhost:3002/cursos/"+this.idCurso)
+      .then(data=>data.json())
+      .then(data=>{
+        this.nombre_curso = data.nombre
 
+      })
     console.log(this.estudiantes_finales)
   }
+
+
 
   remover(){
     localStorage.setItem("idCurso","1");
   }
+
+  async actualizar(id_us:any){
+
+    var stringa = localStorage.getItem('user') || '{}'
+    var json = JSON.parse(stringa)
+    var idUser = json.id;
+    var estid=parseInt(id_us)
+
+
+
+
+    let resultado = await fetch("http://localhost:3002/registro_curso/user/"+estid+"/course/"+this.idCurso,{
+      method: "PUT",
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        puntaje:(document.getElementById(id_us)as HTMLInputElement).value
+      })
+    })
+    console.log(resultado)
+    //location.reload()
+    Swal.fire({
+      title:"Actualización",
+      text:"La calificación del usuario",
+      icon:"success",
+      confirmButtonColor:"#3085d6",
+      confirmButtonText:"Ok"
+
+
+    })
+
+  }
+
+
+
 }

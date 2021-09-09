@@ -17,6 +17,7 @@ export class NuevoCursoComponent implements OnInit {
     precio:0,
     estudiantes:0,
     ganancia:0,
+    linkImagen:""
   }
 
 
@@ -36,6 +37,7 @@ export class NuevoCursoComponent implements OnInit {
         nombre:(document.getElementById("nombreCurso")as HTMLInputElement).value,
         precio:(document.getElementById("precioC")as HTMLInputElement).value,
         descripcion:(document.getElementById("descC")as HTMLInputElement).value,
+        imagen:(document.getElementById("imagen")as HTMLInputElement).value
       })
     })
     console.log(resultado)
