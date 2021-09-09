@@ -1,20 +1,76 @@
-<div class="container">
-    <div class="row">
-        <div id="cursos-container" class="row row-cols-1 row-cols-md-1 g-4 mx-2 my-2">
-            <!-- Agregar el *ngFor -->
-            <div class="col" *ngFor="let _curso of cursosItems">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h5 class="card-title">{{_curso.nombre}}</h5>
-                  <p class="card-text">{{_curso.precio}}</p>
-                  
-                </div>
-                <div class="card-footer d-flex justify-content-between">
-                    <button mat-raised-button type="button" class="boton" value="{{_curso.id}}" (click)="submitNewInscripcion(_curso)" >Inscribirse </button>
-                   
+
+
+<body>
+  <main>
+    <section class="text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Cursos a Inscribirse</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div id="cursos-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+          <div class="col" *ngFor="let _curso of cursosItems">
+
+          <div class="col" >
+
+            <div class="card shadow-sm">
+              <img src="{{_curso.linkImagen}}"  class="img-fluid" alt="">
+
+              <div class="card-body">
+                <p class="card-text">{{_curso.nombre}}</p>
+                <p class="card-text">{{_curso.precio}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button mat-raised-button type="button" class="btn" value="{{_curso.id}}" (click)="submitNewInscripcion(_curso)" >Inscribirse </button>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
-    </div>
-</div>
+        </div>
+
+            </div>
+          </div>
+        </div>
+
+
+  </main>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
