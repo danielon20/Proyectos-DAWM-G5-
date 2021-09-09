@@ -38,7 +38,7 @@ export class CalificarComponent implements OnInit {
 
 
       for(let estu of this.estudiantes){
-      fetch("http://localhost:3002/cursos/"+estu.id_usuario)
+      fetch("http://localhost:3002/usuarios/"+estu.id_usuario)
         .then(data=>data.json())
         .then(data=>{
            var usuario=data
