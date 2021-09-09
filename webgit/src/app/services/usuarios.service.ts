@@ -33,5 +33,6 @@ export class UsuariosService {
   }
   logout(){
     localStorage.removeItem('user');
+    localStorage.removeItem('idCursoE')
   }
 }
