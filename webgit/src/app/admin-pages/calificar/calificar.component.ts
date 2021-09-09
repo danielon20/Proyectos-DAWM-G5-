@@ -68,7 +68,22 @@ export class CalificarComponent implements OnInit {
     localStorage.setItem("idCurso","1");
   }
 
-  actualizar(){
+  async actualizar(){
+    var stringa = localStorage.getItem('user') || '{}'
+    var json = JSON.parse(stringa)
+    var idUser = json.id;
 
+
+
+
+    let resultado = await fetch("http://localhost:3002/registro_curso/user/"+idUser+"/course/"+this.idCurso,{
+      method: "PUT",
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        puntaje:(document.getElementById("cali")as HTMLInputElement).value
+      })
+    })
+    console.log(resultado)
   }
+
 }

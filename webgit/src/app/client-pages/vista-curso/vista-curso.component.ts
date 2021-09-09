@@ -34,6 +34,11 @@ export class VistaCursoComponent implements OnInit {
         this.modulo2=this.todos_moduls[1]
         this.modulo3=this.todos_moduls[2]
         console.log(this.modulo1)
+
+        console.log(this.modulo3.linkVideo)
+        document.getElementById("hola")?.setAttribute("src",this.modulo3.linkVideo)
+        document.getElementById("hola1")?.setAttribute("src",this.modulo1.linkVideo)
+        document.getElementById("hola2")?.setAttribute("src",this.modulo2.linkVideo)
     })
 
     fetch("http://localhost:3002/cursos/"+this.idCurso)
